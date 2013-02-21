@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.sharedBool = [NSNumber numberWithBool:NO];
+        self.difficultyLevel = [NSNumber numberWithInt:0];
     }
     return self;
 }

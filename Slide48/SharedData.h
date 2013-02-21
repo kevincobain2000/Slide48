@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define IsRunningTallPhone() ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
+
+#define IsRunningiPad() ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height > 568)
 #define RGBConvert (float) 255
 
 @interface SharedData : UIView {
@@ -19,4 +21,5 @@
 +(SharedData *) sharedData;
 
 @property (strong, nonatomic) NSNumber *sharedBool;
+@property (strong, nonatomic) NSNumber *difficultyLevel;
 @end
