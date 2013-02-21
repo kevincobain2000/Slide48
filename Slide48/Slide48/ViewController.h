@@ -8,21 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "IAPuzzleBoardView.h"
-#import "SEFilterControl.h"
+
 #import "SharedData.h"
 
 @interface ViewController : UIViewController <IAPuzzleBoardDelegate>{
     UIImage *gambar;
     IAPuzzleBoardView *board;
-    UIButton *startButton;
     NSInteger step;
-    SEFilterControl *filter;
+
     SharedData *sharedData;
-    int difficultyLevel;
+
 }
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
 
+@property (strong, nonatomic) IBOutlet UIView *popupView; //This is hidden initially
 
-- (IBAction)start:(id)sender;
+
+- (IBAction)buttonMenuPressed:(id)sender;
+- (IBAction)buttonResumePressed:(id)sender;
+- (IBAction)buttonStartNewPressed:(id)sender;
+- (IBAction)buttonLoadPressed:(id)sender;
+
 
 @end

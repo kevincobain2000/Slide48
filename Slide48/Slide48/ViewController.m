@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "ASDepthModalViewController.h"
+#import <QuartzCore/QuartzCore.h>
 @interface ViewController ()
 
 @end
@@ -20,9 +21,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"View Did Load ViewController.m");
+    [self setPopupViewProperties];
     //Initialize the Shared Data
     sharedData = [SharedData sharedData];
-    [self difficultyLevel];
     
     gambar = [UIImage imageNamed:@"ff.png"];
     
@@ -35,6 +37,7 @@
 - (void)viewDidUnload {
     [self setBoard:nil];
 
+    [self setPopupView:nil];
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -42,23 +45,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - My Functions
 
--(void) difficultyLevel{
-    NSLog(@"AutoSetting difficulty level = 0");
-    difficultyLevel = 0;
-    filter = [[SEFilterControl alloc]initWithFrame:CGRectMake(10, 300, 300, 70) Titles:[NSArray arrayWithObjects:NSLocalizedString(@"Easy", @"Easy"), NSLocalizedString(@"Medium", @"Medium"), NSLocalizedString(@"Hard", @"Hard"), nil]];
-    [filter addTarget:self action:@selector(filterValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [filter setHandlerColor:[UIColor yellowColor]];
-    [filter setProgressColor:[UIColor magentaColor]];
-    [filter setTitlesFont:[UIFont fontWithName:@"MarkerFelt-Wide" size:14]];
-    [self.view addSubview:filter];
-}
-#pragma mark - Slider delegate method
--(void)filterValueChanged:(SEFilterControl *) sender{
-    NSLog(@"Changing difficulty level %d", sender.SelectedIndex);
-    difficultyLevel = sender.SelectedIndex;
-}
 
 
 #pragma mark - Puzzle View delegate method
@@ -83,7 +70,7 @@
                      completion:^(BOOL finished){
                          // set the view interaction and set the label text
                          // atur status interaksi view dan teks dari label
-                         NSLog(@"Congrats! You finish this %d x %d puzzle with %d steps", (difficultyLevel+3), (difficultyLevel+3), step);
+                         NSLog(@"Congrats! You finish this %d x %d puzzle with %d steps", ([sharedData.difficultyLevel intValue]+3), ([sharedData.difficultyLevel intValue]+3), step);
                          [board setUserInteractionEnabled:NO];
                      }];
 }
@@ -97,11 +84,46 @@
 
 
 
-
+/*
 #pragma mark - IB Actions
 - (IBAction)start:(id)sender {
     step = 0;
     [board setUserInteractionEnabled:YES];
-    [board playWithImage:gambar andSize:(difficultyLevel+2)];    //CHANGE THIS TO 3
+    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];    //CHANGE THIS TO 3
+}
+ */
+
+
+- (IBAction)buttonMenuPressed:(id)sender {
+    /*
+     //MAKE CHANGES
+     //Change the background of the popup View
+    image = [UIImage imageNamed:@"pattern1.jpg"];
+    color = [UIColor colorWithPatternImage:image];
+     */
+    UIColor *color = [UIColor purpleColor];
+    ASDepthModalAnimationStyle style = ASDepthModalAnimationDefault;
+    self.popupView.hidden = NO;
+    [ASDepthModalViewController presentView:self.popupView withBackgroundColor:color popupAnimationStyle:style];
+}
+
+- (IBAction)buttonResumePressed:(id)sender {
+    [ASDepthModalViewController dismiss];
+}
+
+- (IBAction)buttonStartNewPressed:(id)sender {
+    [ASDepthModalViewController dismiss];
+}
+
+- (IBAction)buttonLoadPressed:(id)sender {
+    [ASDepthModalViewController dismiss];
+}
+#pragma mark - Popup View
+-(void) setPopupViewProperties{
+    self.popupView.layer.cornerRadius = 12;
+    self.popupView.layer.shadowOpacity = 0.3;
+    self.popupView.layer.shadowOffset = CGSizeMake(4, 4);
+    self.popupView.layer.shouldRasterize = YES;
+    self.popupView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
 }
 @end
