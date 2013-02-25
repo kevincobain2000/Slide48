@@ -7,17 +7,17 @@
 //
 
 #import "PuzzleLibraryController.h"
-
-
 #import <QuartzCore/QuartzCore.h>
-#import "Animations.h"
+
 #define IMAGE_SIZE 240
 
 @implementation PhotoCell
 
 - (void)viewDidLoad
 {
+    
     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
+    
 }
 
 @synthesize photo;
@@ -47,7 +47,7 @@
     paths = [[NSArray alloc] initWithArray:[self pathsForImages]];
     contents = [[NSArray alloc] initWithArray:[self joinData]];
     
-
+    sharedData = [SharedData sharedData];
     
     self.clearsSelectionOnViewWillAppear = YES;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
@@ -187,7 +187,7 @@
             cell.selectedBackgroundView = v;
         }
         
-        cell.textLabel.text = NSLocalizedString(@"My Akb Collection",@"");
+        cell.textLabel.text = NSLocalizedString(@"Back",@"");
         cell.textLabel.textColor = [UIColor yellowColor];
         cell.textLabel.shadowColor = [UIColor blackColor];
         cell.textLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:26];
@@ -222,9 +222,6 @@
         
         
     }
-    
-    
-    
 }
 
 
@@ -233,9 +230,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    //MAKE CHANGE
     //Take the Path and load into Share Data
-
-    NSLog(@"%@",[[contents objectAtIndex:indexPath.row] objectForKey:@"Path"]);
+    NSLog(@"%i",indexPath.row);
+    if (!indexPath.row ==0) {
+        sharedData.imagePathFromPuzzleLib = [[contents objectAtIndex:indexPath.row] objectForKey:@"Path"];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 @end

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "IAPuzzleBoardView.h"
-
 #import "SharedData.h"
 
 @interface ViewController : UIViewController <IAPuzzleBoardDelegate>{
@@ -21,13 +20,11 @@
 }
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
 
-@property (strong, nonatomic) IBOutlet UIView *popupView; //This is hidden initially
 
 
-- (IBAction)buttonMenuPressed:(id)sender;
-- (IBAction)buttonResumePressed:(id)sender;
-- (IBAction)buttonStartNewPressed:(id)sender;
-- (IBAction)buttonLoadPressed:(id)sender;
+
+
+
 
 
 @end

@@ -23,10 +23,22 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    sharedData = [SharedData sharedData];
+    if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""]) {
+        [self.imageView setImage:[UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib] ];
+    }
+    NSLog(@"%@",sharedData.imagePathFromPuzzleLib);
+}
 - (void)viewDidLoad
+
 {
     [super viewDidLoad];
-    sharedData = [SharedData sharedData];
+    NSLog(@"View Did load Taptochoosemore");
+    
+    
+
+    
     [self difficultyLevel];
 	// Do any additional setup after loading the view.
 }
@@ -64,8 +76,13 @@
 -(void)filterValueChanged:(SEFilterControl *) sender{
     NSLog(@"Changing difficulty level %d", sender.SelectedIndex);
     sharedData.difficultyLevel = [NSNumber numberWithInt:sender.SelectedIndex];
+
 }
 
 - (IBAction)buttonStartPressed:(id)sender {
+}
+- (void)viewDidUnload {
+    [self setImageView:nil];
+    [super viewDidUnload];
 }
 @end

@@ -22,4 +22,5 @@
 
 @property (strong, nonatomic) NSNumber *sharedBool;
 @property (strong, nonatomic) NSNumber *difficultyLevel;
+@property (strong, nonatomic) NSString *imagePathFromPuzzleLib;
 @end

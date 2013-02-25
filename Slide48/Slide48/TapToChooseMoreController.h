@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IAPuzzleBoardView.h"
+
 #import "SEFilterControl.h"
 #import "SharedData.h"
 
@@ -17,4 +17,5 @@
 }
 
 - (IBAction)buttonStartPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @end

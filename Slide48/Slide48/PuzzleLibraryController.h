@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PuzzleLibraryController : UITableViewController {
+#import "SharedData.h"
+@interface PuzzleLibraryController : UITableViewController  {
     
     NSArray *contents;
-    
+    SharedData *sharedData;
     NSArray *thumbs;
     NSArray *paths;
 }

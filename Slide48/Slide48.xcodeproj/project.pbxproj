@@ -94,7 +94,6 @@
 		AD76379916D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374316D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg */; };
 		AD76379A16D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */; };
 		ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */; };
-		ADC0C24116D6348C00321E43 /* ASDepthModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0C24016D6348C00321E43 /* ASDepthModalViewController.m */; };
 		ADC0C24416D63C4100321E43 /* pink-hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24216D63C4100321E43 /* pink-hearts.png */; };
 		ADC0C24516D63C4100321E43 /* pink-hearts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24316D63C4100321E43 /* pink-hearts@2x.png */; };
 		ADC0C24816D6402D00321E43 /* PuzzleLibraryController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */; };
@@ -215,8 +214,6 @@
 		AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amsterdam bikes_puzzle_thumb.jpg"; sourceTree = "<group>"; };
 		ADC0C23B16D62E0E00321E43 /* TapToChooseMoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapToChooseMoreController.h; sourceTree = "<group>"; };
 		ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapToChooseMoreController.m; sourceTree = "<group>"; };
-		ADC0C23F16D6348C00321E43 /* ASDepthModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDepthModalViewController.h; sourceTree = "<group>"; };
-		ADC0C24016D6348C00321E43 /* ASDepthModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDepthModalViewController.m; sourceTree = "<group>"; };
 		ADC0C24216D63C4100321E43 /* pink-hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pink-hearts.png"; sourceTree = "<group>"; };
 		ADC0C24316D63C4100321E43 /* pink-hearts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pink-hearts@2x.png"; sourceTree = "<group>"; };
 		ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleLibraryController.h; sourceTree = "<group>"; };
@@ -382,8 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				AD7636EE16D647A4009C8C34 /* PuzzleImages */,
-				ADC0C23F16D6348C00321E43 /* ASDepthModalViewController.h */,
-				ADC0C24016D6348C00321E43 /* ASDepthModalViewController.m */,
 				ADC0C23E16D62E1B00321E43 /* UI */,
 				ADD823B416CD0E330000671B /* README.rst */,
 				ADD823B316CD08830000671B /* Animations */,
@@ -683,7 +678,6 @@
 				ADD823AE16CD07120000671B /* SharedData.m in Sources */,
 				ADD823B216CD087A0000671B /* Animations.m in Sources */,
 				ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */,
-				ADC0C24116D6348C00321E43 /* ASDepthModalViewController.m in Sources */,
 				ADC0C24816D6402D00321E43 /* PuzzleLibraryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

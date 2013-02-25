@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ASDepthModalViewController.h"
 #import <QuartzCore/QuartzCore.h>
 @interface ViewController ()
 
@@ -18,26 +17,35 @@
 @synthesize board;
 
 #pragma mark - LifeCycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSLog(@"View Did Load ViewController.m");
-    [self setPopupViewProperties];
     //Initialize the Shared Data
     sharedData = [SharedData sharedData];
     
-    gambar = [UIImage imageNamed:@"ff.png"];
     
-    // show the full image first in the view
-    UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
-    fullImage.frame = board.bounds;
-    [board addSubview:fullImage];
+     if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""]) {
+        gambar = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
+        UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
+        fullImage.frame = board.bounds;
+        [board addSubview:fullImage];
+     }
+     else{
+     
+     }
+     
+    
+    
 }
 
 - (void)viewDidUnload {
     [self setBoard:nil];
 
-    [self setPopupView:nil];
+
+
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -94,36 +102,5 @@
  */
 
 
-- (IBAction)buttonMenuPressed:(id)sender {
-    /*
-     //MAKE CHANGES
-     //Change the background of the popup View
-    image = [UIImage imageNamed:@"pattern1.jpg"];
-    color = [UIColor colorWithPatternImage:image];
-     */
-    UIColor *color = [UIColor purpleColor];
-    ASDepthModalAnimationStyle style = ASDepthModalAnimationDefault;
-    self.popupView.hidden = NO;
-    [ASDepthModalViewController presentView:self.popupView withBackgroundColor:color popupAnimationStyle:style];
-}
 
-- (IBAction)buttonResumePressed:(id)sender {
-    [ASDepthModalViewController dismiss];
-}
-
-- (IBAction)buttonStartNewPressed:(id)sender {
-    [ASDepthModalViewController dismiss];
-}
-
-- (IBAction)buttonLoadPressed:(id)sender {
-    [ASDepthModalViewController dismiss];
-}
-#pragma mark - Popup View
--(void) setPopupViewProperties{
-    self.popupView.layer.cornerRadius = 12;
-    self.popupView.layer.shadowOpacity = 0.3;
-    self.popupView.layer.shadowOffset = CGSizeMake(4, 4);
-    self.popupView.layer.shouldRasterize = YES;
-    self.popupView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
-}
 @end

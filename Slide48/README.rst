@@ -1,2 +1,4 @@
 Description
 ===========
+
+[UIImage imageWithContentsOfFile:path]
