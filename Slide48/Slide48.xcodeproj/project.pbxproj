@@ -102,6 +102,10 @@
 		ADB5B36116DCE172007058DF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5B36016DCE172007058DF /* Accelerate.framework */; };
 		ADB5B36416DCE19D007058DF /* brown-textured-paper.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36216DCE19D007058DF /* brown-textured-paper.png */; };
 		ADB5B36516DCE19D007058DF /* brown-textured-paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */; };
+		ADB5B36816DCE7C3007058DF /* PuzzleComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36616DCE7C3007058DF /* PuzzleComplete.png */; };
+		ADB5B36916DCE7C3007058DF /* PuzzleComplete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36716DCE7C3007058DF /* PuzzleComplete@2x.png */; };
+		ADB5B36C16DCE7D7007058DF /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36A16DCE7D7007058DF /* button.png */; };
+		ADB5B36D16DCE7D7007058DF /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36B16DCE7D7007058DF /* button@2x.png */; };
 		ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */; };
 		ADC0C24416D63C4100321E43 /* pink-hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24216D63C4100321E43 /* pink-hearts.png */; };
 		ADC0C24516D63C4100321E43 /* pink-hearts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24316D63C4100321E43 /* pink-hearts@2x.png */; };
@@ -230,6 +234,10 @@
 		ADB5B36016DCE172007058DF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		ADB5B36216DCE19D007058DF /* brown-textured-paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-textured-paper.png"; sourceTree = "<group>"; };
 		ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-textured-paper@2x.png"; sourceTree = "<group>"; };
+		ADB5B36616DCE7C3007058DF /* PuzzleComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuzzleComplete.png; sourceTree = "<group>"; };
+		ADB5B36716DCE7C3007058DF /* PuzzleComplete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PuzzleComplete@2x.png"; sourceTree = "<group>"; };
+		ADB5B36A16DCE7D7007058DF /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		ADB5B36B16DCE7D7007058DF /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		ADC0C23B16D62E0E00321E43 /* TapToChooseMoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapToChooseMoreController.h; sourceTree = "<group>"; };
 		ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapToChooseMoreController.m; sourceTree = "<group>"; };
 		ADC0C24216D63C4100321E43 /* pink-hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pink-hearts.png"; sourceTree = "<group>"; };
@@ -499,6 +507,10 @@
 		ADD823A416CCA6B10000671B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ADB5B36A16DCE7D7007058DF /* button.png */,
+				ADB5B36B16DCE7D7007058DF /* button@2x.png */,
+				ADB5B36616DCE7C3007058DF /* PuzzleComplete.png */,
+				ADB5B36716DCE7C3007058DF /* PuzzleComplete@2x.png */,
 				ADB5B36216DCE19D007058DF /* brown-textured-paper.png */,
 				ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */,
 				ADB5B35416DCDB74007058DF /* Wood.jpg */,
@@ -695,6 +707,10 @@
 				ADB5B35716DCDB74007058DF /* Wood@2x.jpg in Resources */,
 				ADB5B36416DCE19D007058DF /* brown-textured-paper.png in Resources */,
 				ADB5B36516DCE19D007058DF /* brown-textured-paper@2x.png in Resources */,
+				ADB5B36816DCE7C3007058DF /* PuzzleComplete.png in Resources */,
+				ADB5B36916DCE7C3007058DF /* PuzzleComplete@2x.png in Resources */,
+				ADB5B36C16DCE7D7007058DF /* button.png in Resources */,
+				ADB5B36D16DCE7D7007058DF /* button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

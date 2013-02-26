@@ -24,8 +24,10 @@
 - (IBAction)buttonInfoPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewShowPicture;
 
-- (IBAction)showPictureDown:(id)sender;
-- (IBAction)showPictureInside:(id)sender;
+
+//For more info on these actions see the referencing section
+- (IBAction)showPictureDown:(id)sender;//THIS IS TouchDown
+- (IBAction)showPictureInside:(id)sender;//THIS IS TouchUpInside
 
 
 

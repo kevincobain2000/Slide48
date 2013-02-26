@@ -65,9 +65,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
-
-
 #pragma mark - Puzzle View delegate method
 /*
  This delegate method is fired when the puzzle board is finished
@@ -98,7 +95,6 @@
 
 - (void)puzzleBoard:(IAPuzzleBoardView *)board emptyTileDidMovedTo:(CGPoint)tilePoint {
     // You can add some cool sound effects here
-    // Anda bisa tambahkan efek suara yang keren di sini
     NSLog(@"Tile moved, add Sounds or something");
     step += 1;
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
