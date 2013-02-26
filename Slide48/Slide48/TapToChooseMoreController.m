@@ -20,13 +20,17 @@
     if (self) {
         // Custom initialization
     }
-    return self;
+        return self;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     sharedData = [SharedData sharedData];
     if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""]) {
         [self.imageView setImage:[UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib] ];
+        NSLog(@"%@",sharedData.imagePathFromPuzzleLib);
+    }
+    else{
+        
     }
     NSLog(@"%@",sharedData.imagePathFromPuzzleLib);
 }

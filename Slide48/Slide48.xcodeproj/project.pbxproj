@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4786A516DC5F590034C8C3 /* MenuViewController.m */; };
 		AD76374516D647A4009C8C34 /* 17_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7636EF16D647A4009C8C34 /* 17_puzzle.jpg */; };
 		AD76374616D647A4009C8C34 /* 17_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7636F016D647A4009C8C34 /* 17_puzzle_thumb.jpg */; };
 		AD76374716D647A4009C8C34 /* 18_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7636F116D647A4009C8C34 /* 18_puzzle.jpg */; };
@@ -126,6 +127,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD4786A416DC5F590034C8C3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		AD4786A516DC5F590034C8C3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		AD7636EF16D647A4009C8C34 /* 17_puzzle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17_puzzle.jpg; sourceTree = "<group>"; };
 		AD7636F016D647A4009C8C34 /* 17_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17_puzzle_thumb.jpg; sourceTree = "<group>"; };
 		AD7636F116D647A4009C8C34 /* 18_puzzle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18_puzzle.jpg; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
+				AD4786A416DC5F590034C8C3 /* MenuViewController.h */,
+				AD4786A516DC5F590034C8C3 /* MenuViewController.m */,
 				ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */,
 				ADD8237716CCA5A10000671B /* AppDelegate.h */,
 				ADD8237816CCA5A10000671B /* AppDelegate.m */,
@@ -679,6 +684,7 @@
 				ADD823B216CD087A0000671B /* Animations.m in Sources */,
 				ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */,
 				ADC0C24816D6402D00321E43 /* PuzzleLibraryController.m in Sources */,
+				AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,7 @@
 
 }
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
+@property (strong, nonatomic) IBOutlet UILabel *labelNumOfMoves;
 
 
 

@@ -34,9 +34,15 @@
         [board addSubview:fullImage];
      }
      else{
-     
+         gambar = [UIImage imageNamed:@"4_puzzle.jpg"];
+         UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
+         fullImage.frame = board.bounds;
+         [board addSubview:fullImage];
      }
-     
+    
+    step = 0;
+    [board setUserInteractionEnabled:YES];
+    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];    //CHANGE THIS TO 3
     
     
 }
@@ -46,6 +52,7 @@
 
 
 
+    [self setLabelNumOfMoves:nil];
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -88,19 +95,8 @@
     // Anda bisa tambahkan efek suara yang keren di sini
     NSLog(@"Tile moved, add Sounds or something");
     step += 1;
+    self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
 }
-
-
-
-/*
-#pragma mark - IB Actions
-- (IBAction)start:(id)sender {
-    step = 0;
-    [board setUserInteractionEnabled:YES];
-    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];    //CHANGE THIS TO 3
-}
- */
-
 
 
 @end
