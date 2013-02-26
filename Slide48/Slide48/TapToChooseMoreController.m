@@ -39,6 +39,7 @@
 {
     [super viewDidLoad];
     NSLog(@"View Did load Taptochoosemore");
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     
     
 
@@ -58,7 +59,7 @@
 -(void) difficultyLevel{
     
     NSLog(@"AutoSetting difficulty level = 0");
-    float yAxisFilter = 260; //Position of SEFilter easy, medium, hard
+    float yAxisFilter = 280; //Position of SEFilter easy, medium, hard
     
     if (IsRunningTallPhone()){
         yAxisFilter = 340;

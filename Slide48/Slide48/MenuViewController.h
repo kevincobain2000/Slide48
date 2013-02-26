@@ -10,5 +10,6 @@
 
 @interface MenuViewController : UIViewController
 - (IBAction)buttonStartPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *viewPopUp;
 
 @end

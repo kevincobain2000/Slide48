@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "RNBlurModalView.h"
+#import "Animations.h"
 @interface ViewController ()
 
 @end
@@ -21,23 +23,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     NSLog(@"View Did Load ViewController.m");
     //Initialize the Shared Data
     sharedData = [SharedData sharedData];
     
     
      if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""]) {
-        gambar = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
-        UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
-        fullImage.frame = board.bounds;
-        [board addSubview:fullImage];
+         gambar = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
+         UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
+         fullImage.frame = board.bounds;
+         [board addSubview:fullImage];
+         self.imageViewShowPicture.image = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
      }
      else{
          gambar = [UIImage imageNamed:@"4_puzzle.jpg"];
          UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
          fullImage.frame = board.bounds;
          [board addSubview:fullImage];
+         self.imageViewShowPicture.image = [UIImage imageNamed:@"4_puzzle.jpg"];
      }
     
     step = 0;
@@ -53,6 +57,7 @@
 
 
     [self setLabelNumOfMoves:nil];
+    [self setImageViewShowPicture:nil];
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -86,6 +91,7 @@
                          // set the view interaction and set the label text
                          // atur status interaksi view dan teks dari label
                          NSLog(@"Congrats! You finish this %d x %d puzzle with %d steps", ([sharedData.difficultyLevel intValue]+3), ([sharedData.difficultyLevel intValue]+3), step);
+
                          [board setUserInteractionEnabled:NO];
                      }];
 }
@@ -98,5 +104,44 @@
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
 }
 
+#pragma mark - Buttons Pressed
+- (IBAction)buttonInfoPressed:(id)sender {
+    BOOL useCustomView = NO;
+    
+    RNBlurModalView *modal;
+    if (useCustomView) {
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        
+        
+        view.backgroundColor = [UIColor redColor];
+        view.layer.cornerRadius = 5.f;
+        view.layer.borderColor = [UIColor whiteColor].CGColor;
+        view.layer.borderWidth = 5.f;
+        
+        modal = [[RNBlurModalView alloc] initWithViewController:self view:view];
+    }
+    else {
+        NSString *localizedInstruction = [NSString stringWithFormat:@"1. %@\n2. %@\n3. %@",NSLocalizedString(@"Double tap to rotate", @""), NSLocalizedString(@"Long press to view image", @""), NSLocalizedString(@"Pinch to Zoom", @"Pinch to Zoom")];
+        modal = [[RNBlurModalView alloc] initWithViewController:self title: NSLocalizedString(@"Instructions", "@") message:localizedInstruction];
+    }
+    [modal show];
+}
 
+
+- (IBAction)showPictureDown:(id)sender {
+    //Button Touched
+    self.imageViewShowPicture.hidden = NO;
+    [Animations fadeIn:self.imageViewShowPicture andAnimationDuration:0.5 andWait:NO];
+    self.board.hidden = YES;
+}
+
+- (IBAction)showPictureInside:(id)sender {
+    //Touch of the button removed
+    [Animations fadeOut:self.imageViewShowPicture andAnimationDuration:0.25 andWait:YES];
+    self.board.hidden = NO;
+    [Animations fadeIn:self.board andAnimationDuration:0.25 andWait:NO];
+    self.imageViewShowPicture.hidden = YES;
+
+}
 @end

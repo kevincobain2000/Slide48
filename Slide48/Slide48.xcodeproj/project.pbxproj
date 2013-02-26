@@ -94,6 +94,14 @@
 		AD76379816D647A4009C8C34 /* 85_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374216D647A4009C8C34 /* 85_puzzle_thumb.jpg */; };
 		AD76379916D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374316D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg */; };
 		AD76379A16D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */; };
+		ADB5B35616DCDB74007058DF /* Wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B35416DCDB74007058DF /* Wood.jpg */; };
+		ADB5B35716DCDB74007058DF /* Wood@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B35516DCDB74007058DF /* Wood@2x.jpg */; };
+		ADB5B35B16DCE0DE007058DF /* RNBlurModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB5B35A16DCE0DE007058DF /* RNBlurModalView.m */; };
+		ADB5B35D16DCE12E007058DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5B35C16DCE12E007058DF /* QuartzCore.framework */; };
+		ADB5B35F16DCE160007058DF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5B35E16DCE160007058DF /* CoreText.framework */; };
+		ADB5B36116DCE172007058DF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5B36016DCE172007058DF /* Accelerate.framework */; };
+		ADB5B36416DCE19D007058DF /* brown-textured-paper.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36216DCE19D007058DF /* brown-textured-paper.png */; };
+		ADB5B36516DCE19D007058DF /* brown-textured-paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */; };
 		ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */; };
 		ADC0C24416D63C4100321E43 /* pink-hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24216D63C4100321E43 /* pink-hearts.png */; };
 		ADC0C24516D63C4100321E43 /* pink-hearts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC0C24316D63C4100321E43 /* pink-hearts@2x.png */; };
@@ -117,8 +125,6 @@
 		ADD8239F16CCA6A90000671B /* board@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8239916CCA6A90000671B /* board@2x.png */; };
 		ADD823A016CCA6A90000671B /* boardFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8239A16CCA6A90000671B /* boardFrame.png */; };
 		ADD823A116CCA6A90000671B /* boardFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8239B16CCA6A90000671B /* boardFrame@2x.png */; };
-		ADD823A216CCA6A90000671B /* ff.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8239C16CCA6A90000671B /* ff.png */; };
-		ADD823A316CCA6A90000671B /* ff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD8239D16CCA6A90000671B /* ff@2x.png */; };
 		ADD823A916CD06930000671B /* SEFilterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD823A616CD06930000671B /* SEFilterControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ADD823AA16CD06930000671B /* SEFilterKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD823A816CD06930000671B /* SEFilterKnob.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ADD823AE16CD07120000671B /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD823AD16CD07120000671B /* SharedData.m */; };
@@ -215,6 +221,15 @@
 		AD76374216D647A4009C8C34 /* 85_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 85_puzzle_thumb.jpg; sourceTree = "<group>"; };
 		AD76374316D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amsterdam bikes_puzzle.jpg"; sourceTree = "<group>"; };
 		AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amsterdam bikes_puzzle_thumb.jpg"; sourceTree = "<group>"; };
+		ADB5B35416DCDB74007058DF /* Wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wood.jpg; sourceTree = "<group>"; };
+		ADB5B35516DCDB74007058DF /* Wood@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wood@2x.jpg"; sourceTree = "<group>"; };
+		ADB5B35916DCE0DE007058DF /* RNBlurModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBlurModalView.h; sourceTree = "<group>"; };
+		ADB5B35A16DCE0DE007058DF /* RNBlurModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBlurModalView.m; sourceTree = "<group>"; };
+		ADB5B35C16DCE12E007058DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ADB5B35E16DCE160007058DF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		ADB5B36016DCE172007058DF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		ADB5B36216DCE19D007058DF /* brown-textured-paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-textured-paper.png"; sourceTree = "<group>"; };
+		ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-textured-paper@2x.png"; sourceTree = "<group>"; };
 		ADC0C23B16D62E0E00321E43 /* TapToChooseMoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapToChooseMoreController.h; sourceTree = "<group>"; };
 		ADC0C23C16D62E0E00321E43 /* TapToChooseMoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapToChooseMoreController.m; sourceTree = "<group>"; };
 		ADC0C24216D63C4100321E43 /* pink-hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pink-hearts.png"; sourceTree = "<group>"; };
@@ -248,8 +263,6 @@
 		ADD8239916CCA6A90000671B /* board@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "board@2x.png"; sourceTree = "<group>"; };
 		ADD8239A16CCA6A90000671B /* boardFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boardFrame.png; sourceTree = "<group>"; };
 		ADD8239B16CCA6A90000671B /* boardFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boardFrame@2x.png"; sourceTree = "<group>"; };
-		ADD8239C16CCA6A90000671B /* ff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ff.png; sourceTree = "<group>"; };
-		ADD8239D16CCA6A90000671B /* ff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff@2x.png"; sourceTree = "<group>"; };
 		ADD823A516CD06930000671B /* SEFilterControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterControl.h; sourceTree = "<group>"; };
 		ADD823A616CD06930000671B /* SEFilterControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterControl.m; sourceTree = "<group>"; };
 		ADD823A716CD06930000671B /* SEFilterKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterKnob.h; sourceTree = "<group>"; };
@@ -266,6 +279,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB5B36116DCE172007058DF /* Accelerate.framework in Frameworks */,
+				ADB5B35F16DCE160007058DF /* CoreText.framework in Frameworks */,
+				ADB5B35D16DCE12E007058DF /* QuartzCore.framework in Frameworks */,
 				ADD8238C16CCA5CC0000671B /* AVFoundation.framework in Frameworks */,
 				ADD8236916CCA5A10000671B /* UIKit.framework in Frameworks */,
 				ADD8236B16CCA5A10000671B /* Foundation.framework in Frameworks */,
@@ -369,6 +385,15 @@
 			path = PuzzleImages;
 			sourceTree = "<group>";
 		};
+		ADB5B35816DCE0DE007058DF /* RNBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				ADB5B35916DCE0DE007058DF /* RNBlurModalView.h */,
+				ADB5B35A16DCE0DE007058DF /* RNBlurModalView.m */,
+			);
+			path = RNBlurView;
+			sourceTree = "<group>";
+		};
 		ADC0C23E16D62E1B00321E43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +406,7 @@
 		ADD8235C16CCA5A10000671B = {
 			isa = PBXGroup;
 			children = (
+				ADB5B35816DCE0DE007058DF /* RNBlurView */,
 				AD7636EE16D647A4009C8C34 /* PuzzleImages */,
 				ADC0C23E16D62E1B00321E43 /* UI */,
 				ADD823B416CD0E330000671B /* README.rst */,
@@ -406,6 +432,9 @@
 		ADD8236716CCA5A10000671B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADB5B36016DCE172007058DF /* Accelerate.framework */,
+				ADB5B35E16DCE160007058DF /* CoreText.framework */,
+				ADB5B35C16DCE12E007058DF /* QuartzCore.framework */,
 				ADD8238B16CCA5CC0000671B /* AVFoundation.framework */,
 				ADD8236816CCA5A10000671B /* UIKit.framework */,
 				ADD8236A16CCA5A10000671B /* Foundation.framework */,
@@ -470,14 +499,16 @@
 		ADD823A416CCA6B10000671B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ADB5B36216DCE19D007058DF /* brown-textured-paper.png */,
+				ADB5B36316DCE19D007058DF /* brown-textured-paper@2x.png */,
+				ADB5B35416DCDB74007058DF /* Wood.jpg */,
+				ADB5B35516DCDB74007058DF /* Wood@2x.jpg */,
 				ADC0C24216D63C4100321E43 /* pink-hearts.png */,
 				ADC0C24316D63C4100321E43 /* pink-hearts@2x.png */,
 				ADD8239816CCA6A90000671B /* board.png */,
 				ADD8239916CCA6A90000671B /* board@2x.png */,
 				ADD8239A16CCA6A90000671B /* boardFrame.png */,
 				ADD8239B16CCA6A90000671B /* boardFrame@2x.png */,
-				ADD8239C16CCA6A90000671B /* ff.png */,
-				ADD8239D16CCA6A90000671B /* ff@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -571,8 +602,6 @@
 				ADD8239F16CCA6A90000671B /* board@2x.png in Resources */,
 				ADD823A016CCA6A90000671B /* boardFrame.png in Resources */,
 				ADD823A116CCA6A90000671B /* boardFrame@2x.png in Resources */,
-				ADD823A216CCA6A90000671B /* ff.png in Resources */,
-				ADD823A316CCA6A90000671B /* ff@2x.png in Resources */,
 				ADD823B516CD0E330000671B /* README.rst in Resources */,
 				ADC0C24416D63C4100321E43 /* pink-hearts.png in Resources */,
 				ADC0C24516D63C4100321E43 /* pink-hearts@2x.png in Resources */,
@@ -662,6 +691,10 @@
 				AD76379816D647A4009C8C34 /* 85_puzzle_thumb.jpg in Resources */,
 				AD76379916D647A4009C8C34 /* Amsterdam bikes_puzzle.jpg in Resources */,
 				AD76379A16D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg in Resources */,
+				ADB5B35616DCDB74007058DF /* Wood.jpg in Resources */,
+				ADB5B35716DCDB74007058DF /* Wood@2x.jpg in Resources */,
+				ADB5B36416DCE19D007058DF /* brown-textured-paper.png in Resources */,
+				ADB5B36516DCE19D007058DF /* brown-textured-paper@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +718,7 @@
 				ADC0C23D16D62E0E00321E43 /* TapToChooseMoreController.m in Sources */,
 				ADC0C24816D6402D00321E43 /* PuzzleLibraryController.m in Sources */,
 				AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */,
+				ADB5B35B16DCE0DE007058DF /* RNBlurModalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

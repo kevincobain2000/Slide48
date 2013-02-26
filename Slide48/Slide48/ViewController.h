@@ -21,6 +21,12 @@
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
 @property (strong, nonatomic) IBOutlet UILabel *labelNumOfMoves;
 
+- (IBAction)buttonInfoPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewShowPicture;
+
+- (IBAction)showPictureDown:(id)sender;
+- (IBAction)showPictureInside:(id)sender;
+
 
 
 
