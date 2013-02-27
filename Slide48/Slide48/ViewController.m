@@ -29,10 +29,19 @@
     puzzleCompleteImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PuzzleComplete_iPhone"]];
     puzzleCompleteImage.center = CGPointMake(self.view.center.x, self.view.center.y-30);
     [self.view addSubview:puzzleCompleteImage];
+    
+    //Audio Players
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Applause-faded" ofType:@"mp3"]];
     audioPlayerGameFinished = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] ;
     [audioPlayerGameFinished prepareToPlay];
+    
+    NSURL *url_2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Button" ofType:@"wav"]];
+    audioPlayerButtonPress = [[AVAudioPlayer alloc] initWithContentsOfURL:url_2 error:nil] ;
+    [audioPlayerButtonPress prepareToPlay];
+
     //Puzzle COMPLETE Block Finish
+    
+    
     
     puzzleCompleteImage.alpha = 0;
     NSLog(@"View Did Load ViewController.m");
@@ -40,7 +49,7 @@
     sharedData = [SharedData sharedData];
     
     
-     if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""]) {
+     if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""] && [sharedData.sharedBool boolValue] == YES) {
          gambar = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
          UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
          fullImage.frame = board.bounds;
@@ -169,5 +178,8 @@
     [Animations fadeIn:self.board andAnimationDuration:0.25 andWait:NO];
     self.imageViewShowPicture.hidden = YES;
 
+}
+- (IBAction)buttonMenuPressed:(id)sender {
+    [audioPlayerButtonPress play];
 }
 @end

@@ -53,8 +53,12 @@
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //AudioPlayers
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Button" ofType:@"wav"]];
+    audioPlayerBack = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] ;
+    [audioPlayerBack prepareToPlay];
+    
+
 }
 
 - (void)viewDidUnload
@@ -171,9 +175,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-
     if (indexPath.section == 0) {
         
         static NSString *CellIdentifier = @"Back";
@@ -234,6 +235,10 @@
     NSLog(@"index of photo section %i",indexPath.section);
     if (!indexPath.section == 0) {
         sharedData.imagePathFromPuzzleLib = [[contents objectAtIndex:indexPath.row] objectForKey:@"Path"];
+        sharedData.shouldPlayAudio = [NSNumber numberWithBool:YES];
+    }
+    else{
+        [audioPlayerBack play];
     }
     [self dismissViewControllerAnimated:YES completion:nil];
     

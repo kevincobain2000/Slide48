@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+@interface MenuViewController : UIViewController{
+    AVAudioPlayer *audioPlayerButtonPress;
+    
+}
 
-@interface MenuViewController : UIViewController
-- (IBAction)buttonStartPressed:(id)sender;
+
+
 @property (strong, nonatomic) IBOutlet UIView *viewPopUp;
+
+- (IBAction)buttonStartPressed:(id)sender;
+- (IBAction)buttonResumePressed:(id)sender;
+- (IBAction)buttonLoadPressed:(id)sender;
+
 
 @end

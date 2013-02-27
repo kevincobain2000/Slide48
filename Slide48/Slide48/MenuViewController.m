@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
+    self.viewPopUp.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     self.viewPopUp.layer.cornerRadius = 12;
     self.viewPopUp.layer.shadowOpacity = 0.7;
     self.viewPopUp.layer.shadowOffset = CGSizeMake(6, 6);
@@ -34,6 +35,10 @@
     self.viewPopUp.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     
 	// Do any additional setup after loading the view.
+    //Audio Players
+    NSURL *url_2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Button" ofType:@"wav"]];
+    audioPlayerButtonPress = [[AVAudioPlayer alloc] initWithContentsOfURL:url_2 error:nil] ;
+    [audioPlayerButtonPress prepareToPlay];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,9 +48,19 @@
 }
 
 - (IBAction)buttonStartPressed:(id)sender {
+    [audioPlayerButtonPress play];
 }
 - (void)viewDidUnload {
     [self setViewPopUp:nil];
     [super viewDidUnload];
 }
+- (IBAction)buttonResumePressed:(id)sender {
+    [audioPlayerButtonPress play];
+}
+
+- (IBAction)buttonLoadPressed:(id)sender {
+    [audioPlayerButtonPress play];
+}
+
+
 @end

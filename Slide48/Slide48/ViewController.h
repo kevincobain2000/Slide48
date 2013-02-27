@@ -19,6 +19,8 @@
     SharedData *sharedData;
     
     AVAudioPlayer *audioPlayerGameFinished;
+    AVAudioPlayer *audioPlayerButtonPress;
+
 
 }
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
@@ -31,12 +33,9 @@
 //For more info on these actions see the referencing section
 - (IBAction)showPictureDown:(id)sender;//THIS IS TouchDown
 - (IBAction)showPictureInside:(id)sender;//THIS IS TouchUpInside
+- (IBAction)buttonMenuPressed:(id)sender;
 
 
 @property (nonatomic, strong) IBOutlet UIImageView *puzzleCompleteImage;
-
-
-
-
 
 @end

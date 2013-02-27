@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "SharedData.h"
+#import <AVFoundation/AVFoundation.h>
 @interface PuzzleLibraryController : UITableViewController  {
     
     NSArray *contents;
     SharedData *sharedData;
     NSArray *thumbs;
     NSArray *paths;
+    
+    AVAudioPlayer *audioPlayerBack;
+
 }
 
 

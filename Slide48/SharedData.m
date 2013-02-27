@@ -19,6 +19,8 @@
         self.sharedBool = [NSNumber numberWithBool:NO];
         self.difficultyLevel = [NSNumber numberWithInt:0];
         self.imagePathFromPuzzleLib = @"";
+        self.shouldPlayAudio = [NSNumber numberWithBool:NO];
+        
     }
     return self;
 }
