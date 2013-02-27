@@ -17,13 +17,24 @@
 @implementation ViewController
 
 @synthesize board;
-
+@synthesize puzzleCompleteImage;
 #pragma mark - LifeCycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
+    
+    //PUZZLE COMPLETE Life Starts
+    puzzleCompleteImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PuzzleComplete_iPhone"]];
+    puzzleCompleteImage.center = CGPointMake(self.view.center.x, self.view.center.y-30);
+    [self.view addSubview:puzzleCompleteImage];
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Applause-faded" ofType:@"mp3"]];
+    audioPlayerGameFinished = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] ;
+    [audioPlayerGameFinished prepareToPlay];
+    //Puzzle COMPLETE Block Finish
+    
+    puzzleCompleteImage.alpha = 0;
     NSLog(@"View Did Load ViewController.m");
     //Initialize the Shared Data
     sharedData = [SharedData sharedData];
@@ -53,9 +64,6 @@
 
 - (void)viewDidUnload {
     [self setBoard:nil];
-
-
-
     [self setLabelNumOfMoves:nil];
     [self setImageViewShowPicture:nil];
     [super viewDidUnload];
@@ -88,16 +96,40 @@
                          // set the view interaction and set the label text
                          // atur status interaksi view dan teks dari label
                          NSLog(@"Congrats! You finish this %d x %d puzzle with %d steps", ([sharedData.difficultyLevel intValue]+3), ([sharedData.difficultyLevel intValue]+3), step);
-
+                         [self showPuzzleCompleted];
                          [board setUserInteractionEnabled:NO];
                      }];
 }
+
 
 - (void)puzzleBoard:(IAPuzzleBoardView *)board emptyTileDidMovedTo:(CGPoint)tilePoint {
     // You can add some cool sound effects here
     NSLog(@"Tile moved, add Sounds or something");
     step += 1;
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
+}
+
+#pragma mark - Animations
+-(void) showPuzzleCompleted{
+    
+    [audioPlayerGameFinished play];
+    [UIView animateWithDuration:1 animations:^{
+        
+        puzzleCompleteImage.alpha = 1;
+    }];
+    
+    puzzleCompleteImage.transform = CGAffineTransformScale(puzzleCompleteImage.transform, 1/1.8, 1/1.8);
+    [UIView beginAnimations:@"pulseAnimation" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationRepeatAutoreverses:YES];
+    [UIView setAnimationDuration:0.4];
+    [UIView setAnimationRepeatCount:3.5];
+    [UIView setAnimationDelegate:self];
+    
+    puzzleCompleteImage.transform = CGAffineTransformScale(puzzleCompleteImage.transform, 1.8, 1.8);
+    
+    [UIView commitAnimations];
+    [Animations moveUp:self.puzzleCompleteImage andAnimationDuration:1.0 andWait:NO andLength:140];
 }
 
 #pragma mark - Buttons Pressed
@@ -108,8 +140,6 @@
     if (useCustomView) {
         
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-        
-        
         view.backgroundColor = [UIColor redColor];
         view.layer.cornerRadius = 5.f;
         view.layer.borderColor = [UIColor whiteColor].CGColor;

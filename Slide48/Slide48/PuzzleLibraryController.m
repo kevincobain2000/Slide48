@@ -176,7 +176,7 @@
 
     if (indexPath.section == 0) {
         
-        static NSString *CellIdentifier = @"";
+        static NSString *CellIdentifier = @"Back";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
         if (cell == nil) {
@@ -231,8 +231,8 @@
 {
 
     //Take the Path and load into Share Data
-    NSLog(@"%i",indexPath.row);
-    if (!indexPath.row ==0) {
+    NSLog(@"index of photo section %i",indexPath.section);
+    if (!indexPath.section == 0) {
         sharedData.imagePathFromPuzzleLib = [[contents objectAtIndex:indexPath.row] objectForKey:@"Path"];
     }
     [self dismissViewControllerAnimated:YES completion:nil];

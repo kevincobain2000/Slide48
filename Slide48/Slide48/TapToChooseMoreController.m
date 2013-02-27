@@ -62,7 +62,7 @@
     float yAxisFilter = 280; //Position of SEFilter easy, medium, hard
     
     if (IsRunningTallPhone()){
-        yAxisFilter = 340;
+        yAxisFilter = 360;
     }
     else if (IsRunningiPad()){
         //MAKE CHANGE
@@ -71,6 +71,7 @@
         yAxisFilter = 340;
     }
     filter = [[SEFilterControl alloc]initWithFrame:CGRectMake(10, yAxisFilter, 300, 70) Titles:[NSArray arrayWithObjects:NSLocalizedString(@"Easy", @"Easy"), NSLocalizedString(@"Medium", @"Medium"), NSLocalizedString(@"Hard", @"Hard"), nil]];
+    sharedData.difficultyLevel = [NSNumber numberWithInt:0];
     [filter addTarget:self action:@selector(filterValueChanged:) forControlEvents:UIControlEventValueChanged];
     [filter setHandlerColor:[UIColor yellowColor]];
     [filter setProgressColor:[UIColor magentaColor]];

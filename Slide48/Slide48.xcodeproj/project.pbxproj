@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD09110A16DDE02C00297A5F /* PuzzleComplete_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */; };
+		AD09110B16DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */; };
+		AD09110F16DDE1B000297A5F /* Applause-faded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */; };
+		AD09111016DDE1B000297A5F /* Button.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD09110D16DDE1B000297A5F /* Button.wav */; };
+		AD09111116DDE1B000297A5F /* buttonPress.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD09110E16DDE1B000297A5F /* buttonPress.wav */; };
 		AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4786A516DC5F590034C8C3 /* MenuViewController.m */; };
 		AD76374516D647A4009C8C34 /* 17_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7636EF16D647A4009C8C34 /* 17_puzzle.jpg */; };
 		AD76374616D647A4009C8C34 /* 17_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7636F016D647A4009C8C34 /* 17_puzzle_thumb.jpg */; };
@@ -137,6 +142,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuzzleComplete_iPhone.png; sourceTree = "<group>"; };
+		AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PuzzleComplete_iPhone@2x.png"; sourceTree = "<group>"; };
+		AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Applause-faded.mp3"; sourceTree = "<group>"; };
+		AD09110D16DDE1B000297A5F /* Button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Button.wav; sourceTree = "<group>"; };
+		AD09110E16DDE1B000297A5F /* buttonPress.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonPress.wav; sourceTree = "<group>"; };
 		AD4786A416DC5F590034C8C3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		AD4786A516DC5F590034C8C3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		AD7636EF16D647A4009C8C34 /* 17_puzzle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17_puzzle.jpg; sourceTree = "<group>"; };
@@ -300,6 +310,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD09111216DDE1B500297A5F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */,
+				AD09110D16DDE1B000297A5F /* Button.wav */,
+				AD09110E16DDE1B000297A5F /* buttonPress.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		AD7636EE16D647A4009C8C34 /* PuzzleImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +434,7 @@
 		ADD8235C16CCA5A10000671B = {
 			isa = PBXGroup;
 			children = (
+				AD09111216DDE1B500297A5F /* Sounds */,
 				ADB5B35816DCE0DE007058DF /* RNBlurView */,
 				AD7636EE16D647A4009C8C34 /* PuzzleImages */,
 				ADC0C23E16D62E1B00321E43 /* UI */,
@@ -455,6 +476,8 @@
 			isa = PBXGroup;
 			children = (
 				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
+				AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */,
+				AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */,
 				AD4786A416DC5F590034C8C3 /* MenuViewController.h */,
 				AD4786A516DC5F590034C8C3 /* MenuViewController.m */,
 				ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */,
@@ -711,6 +734,11 @@
 				ADB5B36916DCE7C3007058DF /* PuzzleComplete@2x.png in Resources */,
 				ADB5B36C16DCE7D7007058DF /* button.png in Resources */,
 				ADB5B36D16DCE7D7007058DF /* button@2x.png in Resources */,
+				AD09110A16DDE02C00297A5F /* PuzzleComplete_iPhone.png in Resources */,
+				AD09110B16DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png in Resources */,
+				AD09110F16DDE1B000297A5F /* Applause-faded.mp3 in Resources */,
+				AD09111016DDE1B000297A5F /* Button.wav in Resources */,
+				AD09111116DDE1B000297A5F /* buttonPress.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

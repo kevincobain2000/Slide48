@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "IAPuzzleBoardView.h"
 #import "SharedData.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController <IAPuzzleBoardDelegate>{
     UIImage *gambar;
     IAPuzzleBoardView *board;
     NSInteger step;
-
+    
     SharedData *sharedData;
+    
+    AVAudioPlayer *audioPlayerGameFinished;
 
 }
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
@@ -30,7 +33,7 @@
 - (IBAction)showPictureInside:(id)sender;//THIS IS TouchUpInside
 
 
-
+@property (nonatomic, strong) IBOutlet UIImageView *puzzleCompleteImage;
 
 
 
