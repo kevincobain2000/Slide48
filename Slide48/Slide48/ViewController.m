@@ -18,6 +18,7 @@
 
 @synthesize board;
 @synthesize puzzleCompleteImage;
+@synthesize coinview;
 #pragma mark - LifeCycle
 
 - (void)viewDidLoad
@@ -38,6 +39,10 @@
     NSURL *url_2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Button" ofType:@"wav"]];
     audioPlayerButtonPress = [[AVAudioPlayer alloc] initWithContentsOfURL:url_2 error:nil] ;
     [audioPlayerButtonPress prepareToPlay];
+    
+    NSURL *url_3 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jump1" ofType:@"caf"]];
+    audioPlayerTileMoved = [[AVAudioPlayer alloc] initWithContentsOfURL:url_3 error:nil] ;
+    [audioPlayerTileMoved prepareToPlay];
 
     //Puzzle COMPLETE Block Finish
     
@@ -116,13 +121,19 @@
 
 - (void)puzzleBoard:(IAPuzzleBoardView *)board emptyTileDidMovedTo:(CGPoint)tilePoint {
     // You can add some cool sound effects here
-    NSLog(@"Tile moved, add Sounds or something");
+    NSLog(@"Tile moved");
+    [audioPlayerTileMoved play];
     step += 1;
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
 }
 
 #pragma mark - Animations
 -(void) showPuzzleCompleted{
+    //Start the Coin View
+    coinview = [[coinView alloc]initWithFrame:[self.viewPuzzleScoreOutlet bounds] withNum:9000];
+    [self.viewPuzzleScoreOutlet addSubview:coinview];
+    //Move to Audio
+    
     //Audio Plays
     [audioPlayerGameFinished play];
     
@@ -170,9 +181,9 @@
     //Pulse Animation finish and then do the drop
     //Note that both animations don't wait for each other
     
-    float dropHeight = 280;
+    float dropHeight = 260;
     if (IsRunningTallPhone()){
-        dropHeight = 320;
+        dropHeight = 300;
     }
     else if (IsRunningiPad()){
         //Set the dropHeight
@@ -180,7 +191,6 @@
     self.viewPuzzleScoreOutlet.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     [Animations frameAndShadow:self.viewPuzzleScoreOutlet andFrameColor:[UIColor yellowColor]];
     [Animations moveDown:self.viewPuzzleScoreOutlet andAnimationDuration:0.75 andWait:NO andLength:dropHeight];
-    
     //Drop Done
 }
 
@@ -224,5 +234,13 @@
 }
 - (IBAction)buttonMenuPressed:(id)sender {
     [audioPlayerButtonPress play];
+}
+
+#pragma mark coindelegate
+-(void)coinAnimationFinished
+{
+    NSLog(@"Removing Coind View");
+    [coinview removeFromSuperview];
+    coinview = nil;
 }
 @end

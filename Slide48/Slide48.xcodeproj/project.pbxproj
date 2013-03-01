@@ -101,6 +101,20 @@
 		AD76379A16D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */; };
 		AD9FF4A716E073CF0056C216 /* logo-57.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF4A616E073CF0056C216 /* logo-57.png */; };
 		AD9FF4A916E073D30056C216 /* logo-114.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF4A816E073D30056C216 /* logo-114.png */; };
+		AD9FF4AD16E0811A0056C216 /* details-photo-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF4AB16E0811A0056C216 /* details-photo-mask.png */; };
+		AD9FF4AE16E0811A0056C216 /* details-photo-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF4AC16E0811A0056C216 /* details-photo-mask@2x.png */; };
+		AD9FF4B016E082EA0056C216 /* jump1.caf in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF4AF16E082EA0056C216 /* jump1.caf */; };
+		AD9FF50D16E08AEC0056C216 /* coinImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9FF4FF16E08AEC0056C216 /* coinImageView.m */; };
+		AD9FF50E16E08AEC0056C216 /* coinView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9FF50116E08AEC0056C216 /* coinView.m */; };
+		AD9FF50F16E08AEC0056C216 /* OpenGLTexture3D.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9FF50616E08AEC0056C216 /* OpenGLTexture3D.m */; };
+		AD9FF51016E08AEC0056C216 /* ParticleEmitter3D.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9FF50816E08AEC0056C216 /* ParticleEmitter3D.m */; };
+		AD9FF51116E08AEC0056C216 /* bgm_coin_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF50A16E08AEC0056C216 /* bgm_coin_01.mp3 */; };
+		AD9FF51216E08AEC0056C216 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF50B16E08AEC0056C216 /* coin.png */; };
+		AD9FF51316E08AEC0056C216 /* stars2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF50C16E08AEC0056C216 /* stars2.png */; };
+		AD9FF51516E08B0A0056C216 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9FF51416E08B0A0056C216 /* OpenGLES.framework */; };
+		AD9FF51716E08B130056C216 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9FF51616E08B130056C216 /* AudioToolbox.framework */; };
+		AD9FF51A16E08C4B0056C216 /* Endgold.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF51816E08C4B0056C216 /* Endgold.png */; };
+		AD9FF51B16E08C4B0056C216 /* Endgold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9FF51916E08C4B0056C216 /* Endgold@2x.png */; };
 		ADB5B35616DCDB74007058DF /* Wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B35416DCDB74007058DF /* Wood.jpg */; };
 		ADB5B35716DCDB74007058DF /* Wood@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB5B35516DCDB74007058DF /* Wood@2x.jpg */; };
 		ADB5B35B16DCE0DE007058DF /* RNBlurModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB5B35A16DCE0DE007058DF /* RNBlurModalView.m */; };
@@ -239,6 +253,26 @@
 		AD76374416D647A4009C8C34 /* Amsterdam bikes_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amsterdam bikes_puzzle_thumb.jpg"; sourceTree = "<group>"; };
 		AD9FF4A616E073CF0056C216 /* logo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-57.png"; sourceTree = "<group>"; };
 		AD9FF4A816E073D30056C216 /* logo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-114.png"; sourceTree = "<group>"; };
+		AD9FF4AB16E0811A0056C216 /* details-photo-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-photo-mask.png"; sourceTree = "<group>"; };
+		AD9FF4AC16E0811A0056C216 /* details-photo-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-photo-mask@2x.png"; sourceTree = "<group>"; };
+		AD9FF4AF16E082EA0056C216 /* jump1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jump1.caf; sourceTree = "<group>"; };
+		AD9FF4FE16E08AEC0056C216 /* coinImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coinImageView.h; sourceTree = "<group>"; };
+		AD9FF4FF16E08AEC0056C216 /* coinImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coinImageView.m; sourceTree = "<group>"; };
+		AD9FF50016E08AEC0056C216 /* coinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coinView.h; sourceTree = "<group>"; };
+		AD9FF50116E08AEC0056C216 /* coinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coinView.m; sourceTree = "<group>"; };
+		AD9FF50316E08AEC0056C216 /* ConstantsAndMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantsAndMacros.h; sourceTree = "<group>"; };
+		AD9FF50416E08AEC0056C216 /* OpenGLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLCommon.h; sourceTree = "<group>"; };
+		AD9FF50516E08AEC0056C216 /* OpenGLTexture3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture3D.h; sourceTree = "<group>"; };
+		AD9FF50616E08AEC0056C216 /* OpenGLTexture3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLTexture3D.m; sourceTree = "<group>"; };
+		AD9FF50716E08AEC0056C216 /* ParticleEmitter3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleEmitter3D.h; sourceTree = "<group>"; };
+		AD9FF50816E08AEC0056C216 /* ParticleEmitter3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleEmitter3D.m; sourceTree = "<group>"; };
+		AD9FF50A16E08AEC0056C216 /* bgm_coin_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_coin_01.mp3; sourceTree = "<group>"; };
+		AD9FF50B16E08AEC0056C216 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
+		AD9FF50C16E08AEC0056C216 /* stars2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars2.png; sourceTree = "<group>"; };
+		AD9FF51416E08B0A0056C216 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		AD9FF51616E08B130056C216 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AD9FF51816E08C4B0056C216 /* Endgold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Endgold.png; sourceTree = "<group>"; };
+		AD9FF51916E08C4B0056C216 /* Endgold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Endgold@2x.png"; sourceTree = "<group>"; };
 		ADB5B35416DCDB74007058DF /* Wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wood.jpg; sourceTree = "<group>"; };
 		ADB5B35516DCDB74007058DF /* Wood@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wood@2x.jpg"; sourceTree = "<group>"; };
 		ADB5B35916DCE0DE007058DF /* RNBlurModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBlurModalView.h; sourceTree = "<group>"; };
@@ -301,6 +335,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9FF51716E08B130056C216 /* AudioToolbox.framework in Frameworks */,
+				AD9FF51516E08B0A0056C216 /* OpenGLES.framework in Frameworks */,
 				ADB5B36116DCE172007058DF /* Accelerate.framework in Frameworks */,
 				ADB5B35F16DCE160007058DF /* CoreText.framework in Frameworks */,
 				ADB5B35D16DCE12E007058DF /* QuartzCore.framework in Frameworks */,
@@ -317,6 +353,7 @@
 		AD09111216DDE1B500297A5F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				AD9FF4AF16E082EA0056C216 /* jump1.caf */,
 				AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */,
 				AD09110D16DDE1B000297A5F /* Button.wav */,
 				AD09110E16DDE1B000297A5F /* buttonPress.wav */,
@@ -426,6 +463,42 @@
 			name = "logos and launch";
 			sourceTree = "<group>";
 		};
+		AD9FF4FD16E08AEB0056C216 /* coinView */ = {
+			isa = PBXGroup;
+			children = (
+				AD9FF4FE16E08AEC0056C216 /* coinImageView.h */,
+				AD9FF4FF16E08AEC0056C216 /* coinImageView.m */,
+				AD9FF50016E08AEC0056C216 /* coinView.h */,
+				AD9FF50116E08AEC0056C216 /* coinView.m */,
+			);
+			path = coinView;
+			sourceTree = "<group>";
+		};
+		AD9FF50216E08AEC0056C216 /* particle */ = {
+			isa = PBXGroup;
+			children = (
+				AD9FF50316E08AEC0056C216 /* ConstantsAndMacros.h */,
+				AD9FF50416E08AEC0056C216 /* OpenGLCommon.h */,
+				AD9FF50516E08AEC0056C216 /* OpenGLTexture3D.h */,
+				AD9FF50616E08AEC0056C216 /* OpenGLTexture3D.m */,
+				AD9FF50716E08AEC0056C216 /* ParticleEmitter3D.h */,
+				AD9FF50816E08AEC0056C216 /* ParticleEmitter3D.m */,
+			);
+			path = particle;
+			sourceTree = "<group>";
+		};
+		AD9FF50916E08AEC0056C216 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AD9FF51616E08B130056C216 /* AudioToolbox.framework */,
+				AD9FF51416E08B0A0056C216 /* OpenGLES.framework */,
+				AD9FF50A16E08AEC0056C216 /* bgm_coin_01.mp3 */,
+				AD9FF50B16E08AEC0056C216 /* coin.png */,
+				AD9FF50C16E08AEC0056C216 /* stars2.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		ADB5B35816DCE0DE007058DF /* RNBlurView */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +520,9 @@
 		ADD8235C16CCA5A10000671B = {
 			isa = PBXGroup;
 			children = (
+				AD9FF4FD16E08AEB0056C216 /* coinView */,
+				AD9FF50216E08AEC0056C216 /* particle */,
+				AD9FF50916E08AEC0056C216 /* Resource */,
 				AD9FF4AA16E074000056C216 /* logos and launch */,
 				AD09111216DDE1B500297A5F /* Sounds */,
 				ADB5B35816DCE0DE007058DF /* RNBlurView */,
@@ -489,11 +565,11 @@
 		ADD8236E16CCA5A10000671B /* Slide48 */ = {
 			isa = PBXGroup;
 			children = (
-				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
 				AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */,
 				AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */,
 				AD4786A416DC5F590034C8C3 /* MenuViewController.h */,
 				AD4786A516DC5F590034C8C3 /* MenuViewController.m */,
+				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
 				ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */,
 				ADD8237716CCA5A10000671B /* AppDelegate.h */,
 				ADD8237816CCA5A10000671B /* AppDelegate.m */,
@@ -544,6 +620,10 @@
 		ADD823A416CCA6B10000671B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD9FF51816E08C4B0056C216 /* Endgold.png */,
+				AD9FF51916E08C4B0056C216 /* Endgold@2x.png */,
+				AD9FF4AB16E0811A0056C216 /* details-photo-mask.png */,
+				AD9FF4AC16E0811A0056C216 /* details-photo-mask@2x.png */,
 				ADB5B36A16DCE7D7007058DF /* button.png */,
 				ADB5B36B16DCE7D7007058DF /* button@2x.png */,
 				ADB5B36616DCE7C3007058DF /* PuzzleComplete.png */,
@@ -755,6 +835,14 @@
 				AD09111116DDE1B000297A5F /* buttonPress.wav in Resources */,
 				AD9FF4A716E073CF0056C216 /* logo-57.png in Resources */,
 				AD9FF4A916E073D30056C216 /* logo-114.png in Resources */,
+				AD9FF4AD16E0811A0056C216 /* details-photo-mask.png in Resources */,
+				AD9FF4AE16E0811A0056C216 /* details-photo-mask@2x.png in Resources */,
+				AD9FF4B016E082EA0056C216 /* jump1.caf in Resources */,
+				AD9FF51116E08AEC0056C216 /* bgm_coin_01.mp3 in Resources */,
+				AD9FF51216E08AEC0056C216 /* coin.png in Resources */,
+				AD9FF51316E08AEC0056C216 /* stars2.png in Resources */,
+				AD9FF51A16E08C4B0056C216 /* Endgold.png in Resources */,
+				AD9FF51B16E08C4B0056C216 /* Endgold@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +867,10 @@
 				ADC0C24816D6402D00321E43 /* PuzzleLibraryController.m in Sources */,
 				AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */,
 				ADB5B35B16DCE0DE007058DF /* RNBlurModalView.m in Sources */,
+				AD9FF50D16E08AEC0056C216 /* coinImageView.m in Sources */,
+				AD9FF50E16E08AEC0056C216 /* coinView.m in Sources */,
+				AD9FF50F16E08AEC0056C216 /* OpenGLTexture3D.m in Sources */,
+				AD9FF51016E08AEC0056C216 /* ParticleEmitter3D.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,9 @@
 #import "IAPuzzleBoardView.h"
 #import "SharedData.h"
 #import <AVFoundation/AVFoundation.h>
+#import "coinView.h"
 
-@interface ViewController : UIViewController <IAPuzzleBoardDelegate>{
+@interface ViewController : UIViewController <IAPuzzleBoardDelegate, coinViewDelegate>{
     UIImage *gambar;
     IAPuzzleBoardView *board;
     NSInteger step;
@@ -20,9 +21,11 @@
     
     AVAudioPlayer *audioPlayerGameFinished;
     AVAudioPlayer *audioPlayerButtonPress;
+    AVAudioPlayer *audioPlayerTileMoved;
 
 
 }
+@property (strong, nonatomic) coinView *coinview;
 @property (strong, nonatomic) IBOutlet IAPuzzleBoardView *board;
 @property (strong, nonatomic) IBOutlet UILabel *labelNumOfMoves;
 
