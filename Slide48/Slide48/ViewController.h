@@ -34,8 +34,10 @@
 - (IBAction)showPictureDown:(id)sender;//THIS IS TouchDown
 - (IBAction)showPictureInside:(id)sender;//THIS IS TouchUpInside
 - (IBAction)buttonMenuPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *viewPuzzleScoreOutlet;
 
 
 @property (nonatomic, strong) IBOutlet UIImageView *puzzleCompleteImage;
+@property (strong, nonatomic) IBOutlet UILabel *labelFinalNumOfMoves;
 
 @end

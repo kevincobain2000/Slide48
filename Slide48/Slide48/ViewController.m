@@ -75,6 +75,8 @@
     [self setBoard:nil];
     [self setLabelNumOfMoves:nil];
     [self setImageViewShowPicture:nil];
+    [self setViewPuzzleScoreOutlet:nil];
+    [self setLabelFinalNumOfMoves:nil];
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -105,9 +107,10 @@
                          // set the view interaction and set the label text
                          // atur status interaksi view dan teks dari label
                          NSLog(@"Congrats! You finish this %d x %d puzzle with %d steps", ([sharedData.difficultyLevel intValue]+3), ([sharedData.difficultyLevel intValue]+3), step);
-                         [self showPuzzleCompleted];
+                         
                          [board setUserInteractionEnabled:NO];
                      }];
+    [self showPuzzleCompleted];
 }
 
 
@@ -120,8 +123,10 @@
 
 #pragma mark - Animations
 -(void) showPuzzleCompleted{
-    
+    //Audio Plays
     [audioPlayerGameFinished play];
+    
+    //Pulse Animation for the BIG HEART
     [UIView animateWithDuration:1 animations:^{
         
         puzzleCompleteImage.alpha = 1;
@@ -139,6 +144,44 @@
     
     [UIView commitAnimations];
     [Animations moveUp:self.puzzleCompleteImage andAnimationDuration:1.0 andWait:NO andLength:140];
+    //First Animation Finish
+    
+    //Drop the Final SCore view from the Top
+    //First is the PULSE ANIMATION
+    self.viewPuzzleScoreOutlet.layer.cornerRadius = 5.0;
+    self.viewPuzzleScoreOutlet.hidden = NO;
+    self.labelFinalNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
+    [UIView animateWithDuration:1 animations:^{
+        
+        self.viewPuzzleScoreOutlet.alpha = 1;
+    }];
+    
+    self.viewPuzzleScoreOutlet.transform = CGAffineTransformScale(self.viewPuzzleScoreOutlet.transform, 1/1.8, 1/1.8);
+    [UIView beginAnimations:@"pulseAnimation" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationRepeatAutoreverses:YES];
+    [UIView setAnimationDuration:0.4];
+    [UIView setAnimationRepeatCount:2.5];
+    [UIView setAnimationDelegate:self];
+    
+    self.viewPuzzleScoreOutlet.transform = CGAffineTransformScale(self.viewPuzzleScoreOutlet.transform, 1.8, 1.8);
+    
+    [UIView commitAnimations];
+    //Pulse Animation finish and then do the drop
+    //Note that both animations don't wait for each other
+    
+    float dropHeight = 280;
+    if (IsRunningTallPhone()){
+        dropHeight = 320;
+    }
+    else if (IsRunningiPad()){
+        //Set the dropHeight
+    }
+    self.viewPuzzleScoreOutlet.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
+    [Animations frameAndShadow:self.viewPuzzleScoreOutlet andFrameColor:[UIColor yellowColor]];
+    [Animations moveDown:self.viewPuzzleScoreOutlet andAnimationDuration:0.75 andWait:NO andLength:dropHeight];
+    
+    //Drop Done
 }
 
 #pragma mark - Buttons Pressed

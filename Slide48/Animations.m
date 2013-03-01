@@ -161,7 +161,7 @@
 {
     CALayer *layer = view.layer;
     [layer setBorderColor: [color CGColor]]; //Frame Color
-    [layer setBorderWidth:1.0f]; //Frame Border
+    [layer setBorderWidth:6.0f]; //Frame Border
     [layer setShadowColor: [[UIColor grayColor] CGColor]]; //Shadow Color
     [layer setShadowOpacity:0.60f];
     [layer setShadowOffset: CGSizeMake(1, 3)];
