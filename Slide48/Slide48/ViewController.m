@@ -53,8 +53,11 @@
     //Initialize the Shared Data
     sharedData = [SharedData sharedData];
     
-    
+    //-----------------------------------------------------
+    //HERE IT WILL GO THE LAST SAVED GAME
+    //-----------------------------------------------------
      if (![sharedData.imagePathFromPuzzleLib isEqualToString:@""] && [sharedData.sharedBool boolValue] == YES) {
+         
          gambar = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
          UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
          fullImage.frame = board.bounds;
@@ -72,7 +75,10 @@
     step = 0;
     [board setUserInteractionEnabled:YES];
     NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
-    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];    //CHANGE THIS TO 3
+    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];
+    //-----------------------------------------------------
+    //GAME HAS STARTED PLAYING
+    //-----------------------------------------------------
     
     
 }
