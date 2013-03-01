@@ -71,6 +71,7 @@
     
     step = 0;
     [board setUserInteractionEnabled:YES];
+    NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
     [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];    //CHANGE THIS TO 3
     
     
