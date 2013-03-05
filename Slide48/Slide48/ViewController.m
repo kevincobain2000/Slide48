@@ -40,7 +40,7 @@
     audioPlayerButtonPress = [[AVAudioPlayer alloc] initWithContentsOfURL:url_2 error:nil] ;
     [audioPlayerButtonPress prepareToPlay];
     
-    NSURL *url_3 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jump1" ofType:@"caf"]];
+    NSURL *url_3 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"]];
     audioPlayerTileMoved = [[AVAudioPlayer alloc] initWithContentsOfURL:url_3 error:nil] ;
     [audioPlayerTileMoved prepareToPlay];
 

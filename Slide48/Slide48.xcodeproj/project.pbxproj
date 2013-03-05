@@ -155,6 +155,7 @@
 		ADD823AE16CD07120000671B /* SharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD823AD16CD07120000671B /* SharedData.m */; };
 		ADD823B216CD087A0000671B /* Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD823B116CD08790000671B /* Animations.m */; };
 		ADD823B516CD0E330000671B /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = ADD823B416CD0E330000671B /* README.rst */; };
+		ADE4871A16E5B7C9001BA666 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADE4871916E5B7C9001BA666 /* jump.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -328,6 +329,7 @@
 		ADD823B016CD08790000671B /* Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animations.h; sourceTree = "<group>"; };
 		ADD823B116CD08790000671B /* Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animations.m; sourceTree = "<group>"; };
 		ADD823B416CD0E330000671B /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
+		ADE4871916E5B7C9001BA666 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 		AD09111216DDE1B500297A5F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				ADE4871916E5B7C9001BA666 /* jump.wav */,
 				AD9FF4AF16E082EA0056C216 /* jump1.caf */,
 				AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */,
 				AD09110D16DDE1B000297A5F /* Button.wav */,
@@ -843,6 +846,7 @@
 				AD9FF51316E08AEC0056C216 /* stars2.png in Resources */,
 				AD9FF51A16E08C4B0056C216 /* Endgold.png in Resources */,
 				AD9FF51B16E08C4B0056C216 /* Endgold@2x.png in Resources */,
+				ADE4871A16E5B7C9001BA666 /* jump.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
