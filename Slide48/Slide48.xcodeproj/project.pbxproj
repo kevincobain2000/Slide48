@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96C5622416EC3AC000C0DE02 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C5622316EC3AC000C0DE02 /* CoreData.framework */; };
+		96C5622716EC3B1D00C0DE02 /* Slide48.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */; };
+		96C5622A16EC3CA500C0DE02 /* PuzzleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622916EC3CA500C0DE02 /* PuzzleBoard.m */; };
 		AD09110A16DDE02C00297A5F /* PuzzleComplete_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */; };
 		AD09110B16DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */; };
 		AD09110F16DDE1B000297A5F /* Applause-faded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */; };
@@ -159,6 +162,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96C5622316EC3AC000C0DE02 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		96C5622616EC3B1D00C0DE02 /* Slide48.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Slide48.xcdatamodel; sourceTree = "<group>"; };
+		96C5622816EC3CA500C0DE02 /* PuzzleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleBoard.h; sourceTree = "<group>"; };
+		96C5622916EC3CA500C0DE02 /* PuzzleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleBoard.m; sourceTree = "<group>"; };
 		AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuzzleComplete_iPhone.png; sourceTree = "<group>"; };
 		AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PuzzleComplete_iPhone@2x.png"; sourceTree = "<group>"; };
 		AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Applause-faded.mp3"; sourceTree = "<group>"; };
@@ -337,6 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C5622416EC3AC000C0DE02 /* CoreData.framework in Frameworks */,
 				AD9FF51716E08B130056C216 /* AudioToolbox.framework in Frameworks */,
 				AD9FF51516E08B0A0056C216 /* OpenGLES.framework in Frameworks */,
 				ADB5B36116DCE172007058DF /* Accelerate.framework in Frameworks */,
@@ -554,6 +562,7 @@
 		ADD8236716CCA5A10000671B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96C5622316EC3AC000C0DE02 /* CoreData.framework */,
 				ADB5B36016DCE172007058DF /* Accelerate.framework */,
 				ADB5B35E16DCE160007058DF /* CoreText.framework */,
 				ADB5B35C16DCE12E007058DF /* QuartzCore.framework */,
@@ -595,6 +604,9 @@
 				ADD8237A16CCA5A20000671B /* Default.png */,
 				ADD8237C16CCA5A20000671B /* Default@2x.png */,
 				ADD8237E16CCA5A20000671B /* Default-568h@2x.png */,
+				96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */,
+				96C5622816EC3CA500C0DE02 /* PuzzleBoard.h */,
+				96C5622916EC3CA500C0DE02 /* PuzzleBoard.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -875,6 +887,8 @@
 				AD9FF50E16E08AEC0056C216 /* coinView.m in Sources */,
 				AD9FF50F16E08AEC0056C216 /* OpenGLTexture3D.m in Sources */,
 				AD9FF51016E08AEC0056C216 /* ParticleEmitter3D.m in Sources */,
+				96C5622716EC3B1D00C0DE02 /* Slide48.xcdatamodeld in Sources */,
+				96C5622A16EC3CA500C0DE02 /* PuzzleBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1016,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96C5622616EC3B1D00C0DE02 /* Slide48.xcdatamodel */,
+			);
+			currentVersion = 96C5622616EC3B1D00C0DE02 /* Slide48.xcdatamodel */;
+			path = Slide48.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ADD8235D16CCA5A10000671B /* Project object */;
 }
