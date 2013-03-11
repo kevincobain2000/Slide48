@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "RNBlurModalView.h"
 #import "Animations.h"
+#import "SavePuzzleBoard.h"
 @interface ViewController ()
 
 @end
@@ -79,8 +80,10 @@
     //-----------------------------------------------------
     //GAME HAS STARTED PLAYING
     //-----------------------------------------------------
-    
-    
+    NSNumber* sizeBoard = [NSNumber numberWithInt:([sharedData.difficultyLevel intValue]+2)];
+    SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
+    [savePuzzleBoard initCoreData];
+    [savePuzzleBoard insertNewGame:sizeBoard];
 }
 
 - (void)viewDidUnload {
