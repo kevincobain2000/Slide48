@@ -2,7 +2,7 @@
 //  PuzzleBoard.m
 //  Slide48
 //
-//  Created by Thien Nguyen on 3/9/13.
+//  Created by Thien Nguyen on 3/10/13.
 //  Copyright (c) 2013 Pulkit Kathuria. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 
 @implementation PuzzleBoard
 
-@dynamic size;
+@dynamic sizeBoard;
+@dynamic positions;
 
 @end

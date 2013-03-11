@@ -44,7 +44,7 @@
  Method to start playing the puzzle. This should be used when you initiliazed the board with IB (image, size)
  Prosedur untuk memulai memainkan puzzle. Ini digunakakn ketika papan dibuat menggunakan IB. (image, size)
 */
-- (void)playWithImage:(UIImage *)image andSize:(NSInteger)size {
+- (void)playWithImage:(UIImage *)image andSize:(NSInteger)size andTiles:(NSMutableArray*)tileArray{
     IAPuzzleBoard *board = [[IAPuzzleBoard alloc] initWithSize:size];
     self.board = board;
     [board release];
@@ -53,28 +53,33 @@
     _tileWidth = resizedImage.size.width/size;
     _tileHeight = resizedImage.size.height/size;
     
-    self.tiles = [[[NSMutableArray alloc] init] autorelease];
-    for (int i = 0; i < _board.size; i++) {
-        for (int j = 0; j < _board.size; j++) {
-            if ((i == _board.size) && (j == _board.size)) {
-                continue;
+
+    if(tileArray!=NULL)
+        self.tiles = tileArray;
+    else
+    {
+        self.tiles = [[[NSMutableArray alloc] init] autorelease];
+        for (int i = 0; i < _board.size; i++) {
+            for (int j = 0; j < _board.size; j++) {
+                if ((i == _board.size) && (j == _board.size)) {
+                    continue;
+                }
+                
+                CGRect frame = CGRectMake(_tileWidth*j, _tileHeight*i, _tileWidth, _tileHeight);
+                UIImage *tileImage = [resizedImage cropImageFromFrame:frame]; 
+                UIImageView *tileImageView = [[UIImageView alloc] initWithImage:tileImage];
+                
+                [tileImageView.layer setShadowColor:[UIColor blackColor].CGColor];
+                [tileImageView.layer setShadowOpacity:0.65];
+                [tileImageView.layer setShadowRadius:1.5];
+                [tileImageView.layer setShadowOffset:CGSizeMake(1.5, 1.5)];
+                [tileImageView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:tileImageView.layer.bounds] CGPath]];
+                
+                [self.tiles addObject:tileImageView];
+                [tileImageView release];
             }
-            
-            CGRect frame = CGRectMake(_tileWidth*j, _tileHeight*i, _tileWidth, _tileHeight);
-            UIImage *tileImage = [resizedImage cropImageFromFrame:frame]; 
-            UIImageView *tileImageView = [[UIImageView alloc] initWithImage:tileImage];
-            
-            [tileImageView.layer setShadowColor:[UIColor blackColor].CGColor];
-            [tileImageView.layer setShadowOpacity:0.65];
-            [tileImageView.layer setShadowRadius:1.5];
-            [tileImageView.layer setShadowOffset:CGSizeMake(1.5, 1.5)];
-            [tileImageView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:tileImageView.layer.bounds] CGPath]];
-            
-            [self.tiles addObject:tileImageView];
-            [tileImageView release];
         }
     }
-    
     // add dragging recognizer
     UIPanGestureRecognizer *dragGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
     [dragGesture setMaximumNumberOfTouches:1];

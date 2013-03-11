@@ -12,9 +12,10 @@
 
 @interface SavePuzzleBoard : NSObject
 - (void)initCoreData;
-- (void)insertNewGame:(NSNumber*)size;
-- (void)updateGame;
-- (void)deleteGame;
+- (void)insertNewGame:(NSNumber*)size positions:(NSArray*)posArray;
+- (NSArray*) searchGame:(NSNumber*)size;
+- (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray;
+- (void)deleteGame:(NSNumber*)size;
 - (void)loadGame;
 - (PuzzleBoard*)lastPlayedGame;
 @end

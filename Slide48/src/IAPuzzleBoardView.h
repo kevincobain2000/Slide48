@@ -43,7 +43,7 @@
  Method to start playing the puzzle. This should be used when you initiliazed the board with IB (image, size)
  Prosedur untuk memulai memainkan puzzle. Ini digunakakn ketika papan dibuat menggunakan IB. (image, size)
 */
-- (void)playWithImage:(UIImage *)image andSize:(NSInteger)size;
+- (void)playWithImage:(UIImage *)image andSize:(NSInteger)size  andTiles:(NSMutableArray*)tileArray;
 
 /*
  Shuffle the board (SHUFFLE_TIMES) times, and then draw the puzzle board.

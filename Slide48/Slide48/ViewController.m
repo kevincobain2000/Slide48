@@ -11,6 +11,7 @@
 #import "RNBlurModalView.h"
 #import "Animations.h"
 #import "SavePuzzleBoard.h"
+#import "PuzzleBoard.h"
 @interface ViewController ()
 
 @end
@@ -73,17 +74,29 @@
          self.imageViewShowPicture.image = [UIImage imageNamed:@"4_puzzle.jpg"];
      }
     
-    step = 0;
-    [board setUserInteractionEnabled:YES];
-    NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
-    [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2)];
-    //-----------------------------------------------------
-    //GAME HAS STARTED PLAYING
-    //-----------------------------------------------------
     NSNumber* sizeBoard = [NSNumber numberWithInt:([sharedData.difficultyLevel intValue]+2)];
     SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
     [savePuzzleBoard initCoreData];
-    [savePuzzleBoard insertNewGame:sizeBoard];
+    NSMutableArray* posstions = [board tiles];
+    NSArray* puzzleBoard = [savePuzzleBoard searchGame:sizeBoard];
+
+    
+    step = 0;
+    [board setUserInteractionEnabled:YES];
+    NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
+    if(puzzleBoard==NULL)
+    {
+        [savePuzzleBoard insertNewGame:sizeBoard positions:posstions];
+        [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:NULL];
+    }
+    else
+        [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard];
+
+
+    //-----------------------------------------------------
+    //GAME HAS STARTED PLAYING
+    //-----------------------------------------------------
+
 }
 
 - (void)viewDidUnload {
@@ -135,6 +148,13 @@
     [audioPlayerTileMoved play];
     step += 1;
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
+    
+    NSNumber* sizeBoard = [NSNumber numberWithInt:([sharedData.difficultyLevel intValue]+2)];
+    SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
+    [savePuzzleBoard initCoreData];
+    NSMutableArray* posstions = [self.board tiles];
+    [savePuzzleBoard updateGame:sizeBoard positions:posstions];
+    
 }
 
 #pragma mark - Animations
