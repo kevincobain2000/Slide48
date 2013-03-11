@@ -86,8 +86,9 @@
     NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
     if(puzzleBoard==NULL)
     {
-        [savePuzzleBoard insertNewGame:sizeBoard positions:posstions];
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:NULL];
+        posstions = [board tiles];
+        [savePuzzleBoard insertNewGame:sizeBoard positions:posstions];
     }
     else
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard];

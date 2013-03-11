@@ -49,8 +49,9 @@
     {
         NSManagedObject* first = [matchingData lastObject];
         NSNumber* test = [first valueForKey:@"sizeBoard"];
-        NSArray* positions= [first valueForKey:@"positions"];
-        return positions;
+        NSData* positions= [first valueForKey:@"positions"];
+        NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:positions];
+        return array;
     }  
 }
 - (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray
