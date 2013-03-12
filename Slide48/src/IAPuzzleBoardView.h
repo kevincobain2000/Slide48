@@ -49,7 +49,7 @@
  Shuffle the board (SHUFFLE_TIMES) times, and then draw the puzzle board.
  Acak papan sebanyak SHUFFLE_TIMES kali, dan gambar papan puzzle.
 */
-- (void)play;
+- (void)play:(NSData*)posArray;
 
 @end
 

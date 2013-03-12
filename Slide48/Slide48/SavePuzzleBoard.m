@@ -70,7 +70,8 @@
     }else
     {
         NSManagedObject* first = [matchingData lastObject];
-        ((PuzzleBoard*)first).positions = posArray;
+        NSData *arrayData = [NSKeyedArchiver archivedDataWithRootObject:posArray];
+        [first setValue:arrayData forKey:@"positions"];
         [context save:&error];
         
     }

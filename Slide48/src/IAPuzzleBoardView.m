@@ -53,31 +53,25 @@
     _tileWidth = resizedImage.size.width/size;
     _tileHeight = resizedImage.size.height/size;
     
-
-    if(tileArray!=NULL)
-        self.tiles = tileArray;
-    else
-    {
-        self.tiles = [[[NSMutableArray alloc] init] autorelease];
-        for (int i = 0; i < _board.size; i++) {
-            for (int j = 0; j < _board.size; j++) {
-                if ((i == _board.size) && (j == _board.size)) {
-                    continue;
-                }
-                
-                CGRect frame = CGRectMake(_tileWidth*j, _tileHeight*i, _tileWidth, _tileHeight);
-                UIImage *tileImage = [resizedImage cropImageFromFrame:frame]; 
-                UIImageView *tileImageView = [[UIImageView alloc] initWithImage:tileImage];
-                
-                [tileImageView.layer setShadowColor:[UIColor blackColor].CGColor];
-                [tileImageView.layer setShadowOpacity:0.65];
-                [tileImageView.layer setShadowRadius:1.5];
-                [tileImageView.layer setShadowOffset:CGSizeMake(1.5, 1.5)];
-                [tileImageView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:tileImageView.layer.bounds] CGPath]];
-                
-                [self.tiles addObject:tileImageView];
-                [tileImageView release];
+    self.tiles = [[[NSMutableArray alloc] init] autorelease];
+    for (int i = 0; i < _board.size; i++) {
+        for (int j = 0; j < _board.size; j++) {
+            if ((i == _board.size) && (j == _board.size)) {
+                continue;
             }
+            
+            CGRect frame = CGRectMake(_tileWidth*j, _tileHeight*i, _tileWidth, _tileHeight);
+            UIImage *tileImage = [resizedImage cropImageFromFrame:frame]; 
+            UIImageView *tileImageView = [[UIImageView alloc] initWithImage:tileImage];
+            
+            [tileImageView.layer setShadowColor:[UIColor blackColor].CGColor];
+            [tileImageView.layer setShadowOpacity:0.65];
+            [tileImageView.layer setShadowRadius:1.5];
+            [tileImageView.layer setShadowOffset:CGSizeMake(1.5, 1.5)];
+            [tileImageView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:tileImageView.layer.bounds] CGPath]];
+            
+            [self.tiles addObject:tileImageView];
+            [tileImageView release];
         }
     }
     // add dragging recognizer
@@ -93,7 +87,7 @@
     [self addGestureRecognizer:tapGesture];
     [tapGesture release];
     
-    [self play];
+    [self play:tileArray];
 }
 
 /*
@@ -121,8 +115,13 @@
  Shuffle the board (SHUFFLE_TIMES) times, and then draw the puzzle board.
  Acak papan sebanyak SHUFFLE_TIMES kali, dan gambar papan puzzle.
 */
-- (void)play {
-    [_board shuffle:SHUFFLE_TIMES];
+- (void)play:(NSData*)posArray {
+    if(posArray==NULL)
+        [_board shuffle:SHUFFLE_TIMES];
+    else
+    {
+        _board.tiles=posArray;
+    }
     [self drawPuzzle];
 }
 

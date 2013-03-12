@@ -12,6 +12,7 @@
 #import "Animations.h"
 #import "SavePuzzleBoard.h"
 #import "PuzzleBoard.h"
+#import "IAPuzzleBoard.h"
 @interface ViewController ()
 
 @end
@@ -87,7 +88,7 @@
     if(puzzleBoard==NULL)
     {
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:NULL];
-        posstions = [board tiles];
+        posstions = board.board.tiles;
         [savePuzzleBoard insertNewGame:sizeBoard positions:posstions];
     }
     else
@@ -153,7 +154,7 @@
     NSNumber* sizeBoard = [NSNumber numberWithInt:([sharedData.difficultyLevel intValue]+2)];
     SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
     [savePuzzleBoard initCoreData];
-    NSMutableArray* posstions = [self.board tiles];
+    NSMutableArray* posstions = self.board.board.tiles;
     [savePuzzleBoard updateGame:sizeBoard positions:posstions];
     
 }
