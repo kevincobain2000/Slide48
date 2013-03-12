@@ -1,18 +1,13 @@
 //
-//  PuzzleBoard.m
+//  SavedInformation.m
 //  Slide48
 //
 //  Created by Thien Nguyen on 3/11/13.
 //  Copyright (c) 2013 Pulkit Kathuria. All rights reserved.
 //
 
-#import "PuzzleBoard.h"
+#import "SavedInformation.h"
 
-
-@implementation PuzzleBoard
-
-@dynamic positions;
-@dynamic sizeBoard;
-@dynamic step;
+@implementation SavedInformation
 
 @end

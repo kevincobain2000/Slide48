@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9600AEBD16EDA076003A0064 /* PuzzleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEBC16EDA076003A0064 /* PuzzleBoard.m */; };
 		96C5622416EC3AC000C0DE02 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C5622316EC3AC000C0DE02 /* CoreData.framework */; };
 		96C5622716EC3B1D00C0DE02 /* Slide48.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */; };
 		96C5622D16EC40EC00C0DE02 /* SavePuzzleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622C16EC40EC00C0DE02 /* SavePuzzleBoard.m */; };
+		96F9D03416EEF81A00462535 /* SavedInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F9D03316EEF81A00462535 /* SavedInformation.m */; };
+		96F9D03716EEF85200462535 /* PuzzleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F9D03616EEF85200462535 /* PuzzleBoard.m */; };
 		AD09110A16DDE02C00297A5F /* PuzzleComplete_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */; };
 		AD09110B16DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */; };
 		AD09110F16DDE1B000297A5F /* Applause-faded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */; };
@@ -163,12 +164,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9600AEBB16EDA076003A0064 /* PuzzleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleBoard.h; sourceTree = "<group>"; };
-		9600AEBC16EDA076003A0064 /* PuzzleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleBoard.m; sourceTree = "<group>"; };
 		96C5622316EC3AC000C0DE02 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		96C5622616EC3B1D00C0DE02 /* Slide48.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Slide48.xcdatamodel; sourceTree = "<group>"; };
 		96C5622B16EC40EC00C0DE02 /* SavePuzzleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavePuzzleBoard.h; sourceTree = "<group>"; };
 		96C5622C16EC40EC00C0DE02 /* SavePuzzleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavePuzzleBoard.m; sourceTree = "<group>"; };
+		96F9D03216EEF81A00462535 /* SavedInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedInformation.h; sourceTree = "<group>"; };
+		96F9D03316EEF81A00462535 /* SavedInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedInformation.m; sourceTree = "<group>"; };
+		96F9D03516EEF85200462535 /* PuzzleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleBoard.h; sourceTree = "<group>"; };
+		96F9D03616EEF85200462535 /* PuzzleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleBoard.m; sourceTree = "<group>"; };
 		AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PuzzleComplete_iPhone.png; sourceTree = "<group>"; };
 		AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PuzzleComplete_iPhone@2x.png"; sourceTree = "<group>"; };
 		AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Applause-faded.mp3"; sourceTree = "<group>"; };
@@ -610,8 +613,10 @@
 				ADD8237C16CCA5A20000671B /* Default@2x.png */,
 				ADD8237E16CCA5A20000671B /* Default-568h@2x.png */,
 				96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */,
-				9600AEBB16EDA076003A0064 /* PuzzleBoard.h */,
-				9600AEBC16EDA076003A0064 /* PuzzleBoard.m */,
+				96F9D03516EEF85200462535 /* PuzzleBoard.h */,
+				96F9D03616EEF85200462535 /* PuzzleBoard.m */,
+				96F9D03216EEF81A00462535 /* SavedInformation.h */,
+				96F9D03316EEF81A00462535 /* SavedInformation.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -894,7 +899,8 @@
 				AD9FF51016E08AEC0056C216 /* ParticleEmitter3D.m in Sources */,
 				96C5622716EC3B1D00C0DE02 /* Slide48.xcdatamodeld in Sources */,
 				96C5622D16EC40EC00C0DE02 /* SavePuzzleBoard.m in Sources */,
-				9600AEBD16EDA076003A0064 /* PuzzleBoard.m in Sources */,
+				96F9D03416EEF81A00462535 /* SavedInformation.m in Sources */,
+				96F9D03716EEF85200462535 /* PuzzleBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

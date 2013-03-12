@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 #import "PuzzleBoard.h"
-
+#import "SavedInformation.h"
 @interface SavePuzzleBoard : NSObject
 - (void)initCoreData;
 - (void)insertNewGame:(NSNumber*)size positions:(NSArray*)posArray;
-- (NSArray*) searchGame:(NSNumber*)size;
-- (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray;
+- (SavedInformation*) searchGame:(NSNumber*)size;
+- (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray step:(NSNumber*)step;
 - (void)deleteGame:(NSNumber*)size;
 - (void)loadGame;
 - (PuzzleBoard*)lastPlayedGame;

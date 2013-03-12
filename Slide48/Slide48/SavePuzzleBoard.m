@@ -25,13 +25,14 @@
     
     NSData *arrayData = [NSKeyedArchiver archivedDataWithRootObject:posArray];
     [newPuzzleBoard setValue:arrayData forKey:@"positions"];
+    [newPuzzleBoard setValue:[NSNumber numberWithInt:0] forKey:@"step"];
     
     NSError* error;
     [context save:&error];
     NSLog(@"Da save game:");
 
 }
-- (NSArray*) searchGame:(NSNumber*)size
+- (SavedInformation*) searchGame:(NSNumber*)size
 {
     NSEntityDescription* entitydesc = [NSEntityDescription entityForName:@"PuzzleBoard" inManagedObjectContext:context];
     NSFetchRequest* request = [[NSFetchRequest alloc]init];
@@ -47,14 +48,21 @@
         return NULL;
     }else
     {
+        SavedInformation *savedInfo = [[SavedInformation alloc]init];
         NSManagedObject* first = [matchingData lastObject];
-        NSNumber* test = [first valueForKey:@"sizeBoard"];
+        
+        NSNumber* firstSize = [first valueForKey:@"sizeBoard"];
+        NSNumber* firstStep = [first valueForKey:@"step"];
         NSData* positions= [first valueForKey:@"positions"];
         NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:positions];
-        return array;
+        
+        savedInfo.sizeBoard = [firstSize integerValue];
+        savedInfo.positions = array;
+        savedInfo.step = [firstStep integerValue];
+        return savedInfo;
     }  
 }
-- (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray
+- (void)updateGame:(NSNumber*)size positions:(NSArray*)posArray step:(NSNumber*)step
 {
     NSEntityDescription* entitydesc = [NSEntityDescription entityForName:@"PuzzleBoard" inManagedObjectContext:context];
     NSFetchRequest* request = [[NSFetchRequest alloc]init];
@@ -70,8 +78,9 @@
     }else
     {
         NSManagedObject* first = [matchingData lastObject];
-        NSData *arrayData = [NSKeyedArchiver archivedDataWithRootObject:posArray];
+            NSData *arrayData = [NSKeyedArchiver archivedDataWithRootObject:posArray];
         [first setValue:arrayData forKey:@"positions"];
+        [first setValue:step forKey:@"step"];
         [context save:&error];
         
     }

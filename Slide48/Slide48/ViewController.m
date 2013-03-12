@@ -13,6 +13,7 @@
 #import "SavePuzzleBoard.h"
 #import "PuzzleBoard.h"
 #import "IAPuzzleBoard.h"
+#import "SavedInformation.h"
 @interface ViewController ()
 
 @end
@@ -79,21 +80,25 @@
     SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
     [savePuzzleBoard initCoreData];
     NSMutableArray* posstions = [board tiles];
-    NSArray* puzzleBoard = [savePuzzleBoard searchGame:sizeBoard];
+    SavedInformation* puzzleBoard = [savePuzzleBoard searchGame:sizeBoard];
 
     
-    step = 0;
+    
     [board setUserInteractionEnabled:YES];
     NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
     if(puzzleBoard==NULL)
     {
+        step = 0;
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:NULL];
         posstions = board.board.tiles;
         [savePuzzleBoard insertNewGame:sizeBoard positions:posstions];
     }
     else
-        [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard];
-
+    {
+        step = puzzleBoard.step;
+        [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard.positions];
+        
+    }
 
     //-----------------------------------------------------
     //GAME HAS STARTED PLAYING
@@ -155,7 +160,7 @@
     SavePuzzleBoard* savePuzzleBoard= [[SavePuzzleBoard alloc] init];
     [savePuzzleBoard initCoreData];
     NSMutableArray* posstions = self.board.board.tiles;
-    [savePuzzleBoard updateGame:sizeBoard positions:posstions];
+    [savePuzzleBoard updateGame:sizeBoard positions:posstions step:[NSNumber numberWithInt:step]];
     
 }
 
