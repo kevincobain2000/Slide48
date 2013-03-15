@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96C1A77516F0F8590088BE0C /* LoadPuzzleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C1A77416F0F8590088BE0C /* LoadPuzzleController.m */; };
 		96C5622416EC3AC000C0DE02 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C5622316EC3AC000C0DE02 /* CoreData.framework */; };
 		96C5622716EC3B1D00C0DE02 /* Slide48.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622516EC3B1D00C0DE02 /* Slide48.xcdatamodeld */; };
 		96C5622D16EC40EC00C0DE02 /* SavePuzzleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5622C16EC40EC00C0DE02 /* SavePuzzleBoard.m */; };
@@ -164,6 +165,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96C1A77316F0F8590088BE0C /* LoadPuzzleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadPuzzleController.h; sourceTree = "<group>"; };
+		96C1A77416F0F8590088BE0C /* LoadPuzzleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadPuzzleController.m; sourceTree = "<group>"; };
 		96C5622316EC3AC000C0DE02 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		96C5622616EC3B1D00C0DE02 /* Slide48.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Slide48.xcdatamodel; sourceTree = "<group>"; };
 		96C5622B16EC40EC00C0DE02 /* SavePuzzleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavePuzzleBoard.h; sourceTree = "<group>"; };
@@ -541,11 +544,11 @@
 				AD9FF50216E08AEC0056C216 /* particle */,
 				AD9FF50916E08AEC0056C216 /* Resource */,
 				AD9FF4AA16E074000056C216 /* logos and launch */,
-				AD09111216DDE1B500297A5F /* Sounds */,
 				ADB5B35816DCE0DE007058DF /* RNBlurView */,
 				AD7636EE16D647A4009C8C34 /* PuzzleImages */,
 				ADC0C23E16D62E1B00321E43 /* UI */,
 				ADD823B416CD0E330000671B /* README.rst */,
+				AD09111216DDE1B500297A5F /* Sounds */,
 				ADD823B316CD08830000671B /* Animations */,
 				ADD823AF16CD07160000671B /* SharedData */,
 				ADD823AB16CD069C0000671B /* SEFilterControl */,
@@ -583,14 +586,16 @@
 		ADD8236E16CCA5A10000671B /* Slide48 */ = {
 			isa = PBXGroup;
 			children = (
+				96C1A77316F0F8590088BE0C /* LoadPuzzleController.h */,
+				96C1A77416F0F8590088BE0C /* LoadPuzzleController.m */,
+				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
+				ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */,
 				96C5622B16EC40EC00C0DE02 /* SavePuzzleBoard.h */,
 				96C5622C16EC40EC00C0DE02 /* SavePuzzleBoard.m */,
 				AD09110816DDE02C00297A5F /* PuzzleComplete_iPhone.png */,
 				AD09110916DDE02C00297A5F /* PuzzleComplete_iPhone@2x.png */,
 				AD4786A416DC5F590034C8C3 /* MenuViewController.h */,
 				AD4786A516DC5F590034C8C3 /* MenuViewController.m */,
-				ADC0C24616D6402D00321E43 /* PuzzleLibraryController.h */,
-				ADC0C24716D6402D00321E43 /* PuzzleLibraryController.m */,
 				ADD8237716CCA5A10000671B /* AppDelegate.h */,
 				ADD8237816CCA5A10000671B /* AppDelegate.m */,
 				ADC0C23B16D62E0E00321E43 /* TapToChooseMoreController.h */,
@@ -901,6 +906,7 @@
 				96C5622D16EC40EC00C0DE02 /* SavePuzzleBoard.m in Sources */,
 				96F9D03416EEF81A00462535 /* SavedInformation.m in Sources */,
 				96F9D03716EEF85200462535 /* PuzzleBoard.m in Sources */,
+				96C1A77516F0F8590088BE0C /* LoadPuzzleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
