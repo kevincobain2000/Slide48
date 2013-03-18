@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "YISplashScreen.h"
+#import "YISplashScreenAnimation.h"
+
+#define SHOWS_MIGRATION_ALERT   0   // 0 or 1
+#define ANIMATION_TYPE          2   // 0-2
 
 @implementation AppDelegate
 
@@ -14,10 +19,45 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+- (void)startApp
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    
+#if ANIMATION_TYPE == 0
+    
+    // simple fade out
+    [YISplashScreen hide];
+    
+#elif ANIMATION_TYPE == 1
+    
+    // manual
+    [YISplashScreen hideWithAnimations:^(CALayer* splashLayer) {
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:0.7];
+        [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [CATransaction setCompletionBlock:^{
+            
+        }];
+        
+        splashLayer.position = CGPointMake(splashLayer.position.x, splashLayer.position.y-splashLayer.bounds.size.height);
+        
+        [CATransaction commit];
+    }];
+    
+#else
+    
+    // page curl
+    [YISplashScreen hideWithAnimations:[YISplashScreenAnimation pageCurlAnimation]];
+    
+#endif
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [YISplashScreen show];
+    [self startApp];
     return YES;
 }
 							

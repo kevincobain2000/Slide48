@@ -69,8 +69,10 @@
          fullImage.frame = board.bounds;
          [board addSubview:fullImage];
          self.imageViewShowPicture.image = [UIImage imageWithContentsOfFile:sharedData.imagePathFromPuzzleLib];
+         
      }
      else{
+         
          gambar = [UIImage imageNamed:@"4_puzzle.jpg"];
          UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
          fullImage.frame = board.bounds;

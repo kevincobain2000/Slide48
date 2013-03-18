@@ -74,7 +74,7 @@
 -(void) difficultyLevel{
     
     
-    float yAxisFilter = 300; //Position of SEFilter easy, medium, hard
+    float yAxisFilter = 280; //Position of SEFilter easy, medium, hard
     
     if (IsRunningTallPhone()){
         yAxisFilter = 320;

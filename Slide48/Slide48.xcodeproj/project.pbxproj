@@ -167,6 +167,8 @@
 		ADE9CFD416F6FD1A0004B797 /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE9CFD216F6FD1A0004B797 /* h1.png */; };
 		ADE9CFD516F6FD1A0004B797 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE9CFD316F6FD1A0004B797 /* h2.png */; };
 		ADE9CFDB16F705C00004B797 /* greyB.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE9CFDA16F705C00004B797 /* greyB.png */; };
+		ADE9CFE116F720060004B797 /* YISplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9CFDE16F720060004B797 /* YISplashScreen.m */; };
+		ADE9CFE216F720060004B797 /* YISplashScreenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9CFE016F720060004B797 /* YISplashScreenAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -356,6 +358,10 @@
 		ADE9CFD216F6FD1A0004B797 /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
 		ADE9CFD316F6FD1A0004B797 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
 		ADE9CFDA16F705C00004B797 /* greyB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyB.png; sourceTree = "<group>"; };
+		ADE9CFDD16F720060004B797 /* YISplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YISplashScreen.h; sourceTree = "<group>"; };
+		ADE9CFDE16F720060004B797 /* YISplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISplashScreen.m; sourceTree = "<group>"; };
+		ADE9CFDF16F720060004B797 /* YISplashScreenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YISplashScreenAnimation.h; sourceTree = "<group>"; };
+		ADE9CFE016F720060004B797 /* YISplashScreenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISplashScreenAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +558,7 @@
 		ADD8235C16CCA5A10000671B = {
 			isa = PBXGroup;
 			children = (
+				ADE9CFDC16F720060004B797 /* YISplashScreen */,
 				AD9FF4FD16E08AEB0056C216 /* coinView */,
 				AD9FF50216E08AEC0056C216 /* particle */,
 				AD9FF50916E08AEC0056C216 /* Resource */,
@@ -714,6 +721,17 @@
 				ADD823B116CD08790000671B /* Animations.m */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		ADE9CFDC16F720060004B797 /* YISplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ADE9CFDD16F720060004B797 /* YISplashScreen.h */,
+				ADE9CFDE16F720060004B797 /* YISplashScreen.m */,
+				ADE9CFDF16F720060004B797 /* YISplashScreenAnimation.h */,
+				ADE9CFE016F720060004B797 /* YISplashScreenAnimation.m */,
+			);
+			path = YISplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -927,6 +945,8 @@
 				96F9D03416EEF81A00462535 /* SavedInformation.m in Sources */,
 				96F9D03716EEF85200462535 /* PuzzleBoard.m in Sources */,
 				96C1A77516F0F8590088BE0C /* LoadPuzzleController.m in Sources */,
+				ADE9CFE116F720060004B797 /* YISplashScreen.m in Sources */,
+				ADE9CFE216F720060004B797 /* YISplashScreenAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
