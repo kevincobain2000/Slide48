@@ -26,7 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
+    //Initialize the Shared Data
+    sharedData = [SharedData sharedData];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"greyB.png"]];
     self.viewPopUp.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     self.viewPopUp.layer.cornerRadius = 12;
     self.viewPopUp.layer.shadowOpacity = 0.7;
@@ -49,6 +52,9 @@
 
 - (IBAction)buttonStartPressed:(id)sender {
     [audioPlayerButtonPress play];
+    sharedData.willPlayNewGame = [NSNumber numberWithBool:YES];
+    
+    
 }
 - (void)viewDidUnload {
     [self setViewPopUp:nil];

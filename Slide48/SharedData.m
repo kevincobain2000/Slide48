@@ -20,6 +20,7 @@
         self.difficultyLevel = [NSNumber numberWithInt:0];
         self.imagePathFromPuzzleLib = @"";
         self.shouldPlayAudio = [NSNumber numberWithBool:NO];
+        self.willPlayNewGame = [NSNumber numberWithBool:NO];
         
     }
     return self;

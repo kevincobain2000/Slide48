@@ -24,4 +24,5 @@
 @property (strong, nonatomic) NSNumber *difficultyLevel;
 @property (strong, nonatomic) NSString *imagePathFromPuzzleLib;
 @property (strong, nonatomic) NSNumber *shouldPlayAudio;
+@property (strong, nonatomic) NSNumber *willPlayNewGame;
 @end

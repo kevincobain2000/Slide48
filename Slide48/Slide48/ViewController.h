@@ -42,5 +42,6 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *puzzleCompleteImage;
 @property (strong, nonatomic) IBOutlet UILabel *labelFinalNumOfMoves;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewEndGold;
 
 @end

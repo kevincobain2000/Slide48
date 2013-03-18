@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     
     //PUZZLE COMPLETE Life Starts
@@ -87,6 +88,7 @@
     
     [board setUserInteractionEnabled:YES];
     NSLog(@"Difficulty level to start play %d",[sharedData.difficultyLevel intValue]);
+    NSLog(@"Print Puzzle Board %@", puzzleBoard);
     if(puzzleBoard==NULL)
     {
         step = 0;
@@ -100,7 +102,13 @@
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard.positions];
         
     }
-
+    
+    if ([sharedData.willPlayNewGame boolValue] == YES) {
+        step = 0;
+        sharedData.willPlayNewGame = [NSNumber numberWithBool:NO];
+        NSLog(@"Current Steps %ld, will play new game %@", (long)step, sharedData.willPlayNewGame);
+    }
+    self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
     //-----------------------------------------------------
     //GAME HAS STARTED PLAYING
     //-----------------------------------------------------
@@ -113,6 +121,7 @@
     [self setImageViewShowPicture:nil];
     [self setViewPuzzleScoreOutlet:nil];
     [self setLabelFinalNumOfMoves:nil];
+    [self setImageViewEndGold:nil];
     [super viewDidUnload];
 }
 - (void)didReceiveMemoryWarning
@@ -153,6 +162,7 @@
 - (void)puzzleBoard:(IAPuzzleBoardView *)board emptyTileDidMovedTo:(CGPoint)tilePoint {
     // You can add some cool sound effects here
     NSLog(@"Tile moved");
+    [audioPlayerTileMoved stop];
     [audioPlayerTileMoved play];
     step += 1;
     self.labelNumOfMoves.text = [NSString stringWithFormat:@"%d",step];
@@ -194,6 +204,16 @@
     [UIView commitAnimations];
     [Animations moveUp:self.puzzleCompleteImage andAnimationDuration:1.0 andWait:NO andLength:140];
     //First Animation Finish
+    
+    //Start Animating the EndGold Image View
+    self.imageViewEndGold.animationImages = [NSArray arrayWithObjects:
+                                         [UIImage imageNamed:@"h1.png"],
+                                         [UIImage imageNamed:@"h2.png"], nil];
+                                            
+    self.imageViewEndGold.animationDuration = 1.0f;
+    self.imageViewEndGold.animationRepeatCount = 9;
+    [self.imageViewEndGold startAnimating];
+    //End Animating the EndGold Image View
     
     //Drop the Final SCore view from the Top
     //First is the PULSE ANIMATION

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "SharedData.h"
 @interface MenuViewController : UIViewController{
     AVAudioPlayer *audioPlayerButtonPress;
-    
+    SharedData *sharedData;
 }
 
 

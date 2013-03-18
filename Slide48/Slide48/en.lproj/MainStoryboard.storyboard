@@ -9,15 +9,16 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="MeA-8A-KJ4">
-                                <rect key="frame" x="6" y="0.0" width="308" height="390"/>
+                                <rect key="frame" x="6" y="0.0" width="308" height="302"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="KKK-ZA-oXN" customClass="IAPuzzleBoardView">
-                                <rect key="frame" x="6" y="90" width="308" height="301"/>
+                                <rect key="frame" x="6" y="53" width="308" height="359"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="rm9-61-cwF"/>
@@ -42,7 +43,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Moves" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="61a-bD-pjl">
                                 <rect key="frame" x="116" y="13" width="81" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
                                 <color key="textColor" red="0.97592303690000004" green="1" blue="0.083651231529999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,8 +65,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ifb-UW-o37">
-                                <rect key="frame" x="96" y="414" width="120" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="96" y="420" width="120" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="Show Picture" backgroundImage="button.png">
                                     <color key="titleColor" red="0.97592303690000004" green="1" blue="0.083651231529999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,7 +81,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="2TJ-sO-qqf">
-                                <rect key="frame" x="6" y="0.0" width="308" height="280"/>
+                                <rect key="frame" x="6" y="0.0" width="308" height="201"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Puzzle Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qdA-5Q-4Yz">
@@ -90,22 +91,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number Of Moves :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cqq-dE-PYk">
-                                        <rect key="frame" x="20" y="75" width="191" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="20" y="143" width="191" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
                                         <color key="textColor" red="0.97478874360000001" green="0.97478874360000001" blue="0.97478874360000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number Of Moves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BBd-hg-cNW">
-                                        <rect key="frame" x="228" y="75" width="60" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="228" y="143" width="60" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
                                         <color key="textColor" red="0.97478874360000001" green="0.97478874360000001" blue="0.97478874360000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Endgold.png" id="qnp-XJ-ezr">
-                                        <rect key="frame" x="76" y="55" width="144" height="137"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="h1.png" id="qnp-XJ-ezr">
+                                        <rect key="frame" x="63" y="51" width="183" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="board" destination="KKK-ZA-oXN" id="BRh-34-SIl"/>
+                        <outlet property="imageViewEndGold" destination="qnp-XJ-ezr" id="dtE-nR-GdL"/>
                         <outlet property="imageViewShowPicture" destination="MeA-8A-KJ4" id="2GC-gI-1oB"/>
                         <outlet property="labelFinalNumOfMoves" destination="BBd-hg-cNW" id="u0N-10-Cz6"/>
                         <outlet property="labelNumOfMoves" destination="61a-bD-pjl" id="qGW-Jy-PfZ"/>
@@ -130,7 +132,7 @@
             <objects>
                 <tableViewController id="CD3-m9-T7H" customClass="LoadPuzzleController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hne-zW-uHE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -160,7 +162,7 @@
             <objects>
                 <viewController id="4Rx-Dc-WWJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cm-07-Mx2">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="2QD-FI-tX1">
@@ -234,11 +236,11 @@
             <objects>
                 <viewController id="YYo-ze-wH7" customClass="TapToChooseMoreController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sfe-IY-L7G">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4_puzzle_thumb.jpg" id="Hty-en-bKj">
-                                <rect key="frame" x="14" y="20" width="293" height="287"/>
+                                <rect key="frame" x="14" y="20" width="293" height="199"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Zt-Vp-fUp">
@@ -258,7 +260,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IVT-Ob-JdV">
-                                <rect key="frame" x="8" y="13" width="304" height="319"/>
+                                <rect key="frame" x="8" y="13" width="304" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
                                 <state key="normal" title="Tap To choose More !" backgroundImage="details-photo-mask.png">
@@ -307,7 +309,7 @@
             <objects>
                 <tableViewController id="tgb-Qz-IXt" customClass="PuzzleLibraryController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xC4-hb-hPq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -335,9 +337,9 @@
     </scenes>
     <resources>
         <image name="4_puzzle_thumb.jpg" width="529" height="800"/>
-        <image name="Endgold.png" width="213" height="226"/>
         <image name="button.png" width="248" height="84"/>
         <image name="details-photo-mask.png" width="297" height="199"/>
+        <image name="h1.png" width="500" height="500"/>
     </resources>
     <classes>
         <class className="IAPuzzleBoardView" superclassName="UIView">
@@ -379,6 +381,7 @@
                 <relationship kind="action" name="showPictureDown:"/>
                 <relationship kind="action" name="showPictureInside:"/>
                 <relationship kind="outlet" name="board" candidateClass="IAPuzzleBoardView"/>
+                <relationship kind="outlet" name="imageViewEndGold" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageViewShowPicture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="labelFinalNumOfMoves" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelNumOfMoves" candidateClass="UILabel"/>
@@ -390,10 +393,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Y8P-aW-LAm"/>
-        <segue reference="ooG-iA-tAQ"/>
+        <segue reference="fTB-vh-Y9e"/>
+        <segue reference="Aoh-Wd-Uuv"/>
     </inferredMetricsTieBreakers>
 </document>
