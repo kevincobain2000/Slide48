@@ -24,6 +24,7 @@
 
 - (IBAction)buttonTapToChoosePressed:(id)sender;
 - (IBAction)buttonBackPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *buttonTapToChooseMore;
 
 
 @end

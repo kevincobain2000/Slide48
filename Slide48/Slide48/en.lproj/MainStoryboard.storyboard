@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,15 +9,15 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="MeA-8A-KJ4">
-                                <rect key="frame" x="6" y="0.0" width="308" height="302"/>
+                                <rect key="frame" x="6" y="0.0" width="308" height="390"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="KKK-ZA-oXN" customClass="IAPuzzleBoardView">
-                                <rect key="frame" x="6" y="58" width="308" height="301"/>
+                                <rect key="frame" x="6" y="90" width="308" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="rm9-61-cwF"/>
@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="2TJ-sO-qqf">
-                                <rect key="frame" x="6" y="0.0" width="308" height="192"/>
+                                <rect key="frame" x="6" y="0.0" width="308" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Puzzle Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qdA-5Q-4Yz">
@@ -130,7 +130,7 @@
             <objects>
                 <tableViewController id="CD3-m9-T7H" customClass="LoadPuzzleController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hne-zW-uHE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -160,7 +160,7 @@
             <objects>
                 <viewController id="4Rx-Dc-WWJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cm-07-Mx2">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="2QD-FI-tX1">
@@ -168,7 +168,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AKn-8O-Rjn">
-                                        <rect key="frame" x="86" y="20" width="104" height="44"/>
+                                        <rect key="frame" x="86" y="51" width="104" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <state key="normal" title="Resume" backgroundImage="button.png">
@@ -183,7 +183,7 @@
                                             <segue destination="2" kind="modal" modalTransitionStyle="crossDissolve" id="Aoh-Wd-Uuv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EyP-NH-v64">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EyP-NH-v64">
                                         <rect key="frame" x="103" y="103" width="66" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
@@ -200,7 +200,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IIH-SL-bR4">
-                                        <rect key="frame" x="86" y="179" width="104" height="44"/>
+                                        <rect key="frame" x="86" y="155" width="104" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <state key="normal" title="Start new" backgroundImage="button.png">
@@ -234,15 +234,15 @@
             <objects>
                 <viewController id="YYo-ze-wH7" customClass="TapToChooseMoreController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sfe-IY-L7G">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4_puzzle_thumb.jpg" id="Hty-en-bKj">
-                                <rect key="frame" x="14" y="20" width="293" height="261"/>
+                                <rect key="frame" x="14" y="20" width="293" height="287"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Zt-Vp-fUp">
-                                <rect key="frame" x="210" y="410" width="90" height="44"/>
+                                <rect key="frame" x="102" y="410" width="116" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="Start" backgroundImage="button.png">
@@ -258,8 +258,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IVT-Ob-JdV">
-                                <rect key="frame" x="9" y="14" width="304" height="291"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="8" y="13" width="304" height="319"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="27"/>
                                 <state key="normal" title="Tap To choose More !" backgroundImage="details-photo-mask.png">
                                     <color key="titleColor" red="0.97592303690000004" green="1" blue="0.083651231529999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -273,7 +273,7 @@
                                     <segue destination="tgb-Qz-IXt" kind="modal" id="iAb-cC-nuy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ywe-sf-5nE">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ywe-sf-5nE">
                                 <rect key="frame" x="26" y="410" width="90" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
@@ -294,19 +294,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="4jl-Kz-CtU"/>
                     <connections>
+                        <outlet property="buttonTapToChooseMore" destination="IVT-Ob-JdV" id="oWW-Q7-ucF"/>
                         <outlet property="imageView" destination="Hty-en-bKj" id="6xW-98-5dS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jB-fc-8SF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="1086"/>
+            <point key="canvasLocation" x="828" y="1171"/>
         </scene>
         <!--Puzzle Library Controller-->
         <scene sceneID="L8n-cb-lz3">
             <objects>
                 <tableViewController id="tgb-Qz-IXt" customClass="PuzzleLibraryController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xC4-hb-hPq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -366,6 +367,7 @@
                 <relationship kind="action" name="buttonBackPressed:"/>
                 <relationship kind="action" name="buttonStartPressed:"/>
                 <relationship kind="action" name="buttonTapToChoosePressed:"/>
+                <relationship kind="outlet" name="buttonTapToChooseMore" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
@@ -388,10 +390,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fTB-vh-Y9e"/>
-        <segue reference="Aoh-Wd-Uuv"/>
+        <segue reference="Y8P-aW-LAm"/>
+        <segue reference="ooG-iA-tAQ"/>
     </inferredMetricsTieBreakers>
 </document>

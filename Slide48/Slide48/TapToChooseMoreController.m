@@ -45,6 +45,8 @@
 
 {
     [super viewDidLoad];
+    
+    
     NSLog(@"View Did load Taptochoosemore");
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pink-hearts.png"]];
     
@@ -75,7 +77,7 @@
     float yAxisFilter = 300; //Position of SEFilter easy, medium, hard
     
     if (IsRunningTallPhone()){
-        yAxisFilter = 360;
+        yAxisFilter = 320;
     }
     else if (IsRunningiPad()){
         //MAKE CHANGE
@@ -111,6 +113,7 @@
 - (void)viewDidUnload {
     
     [self setImageView:nil];
+    [self setButtonTapToChooseMore:nil];
     [super viewDidUnload];
 }
 - (IBAction)buttonTapToChoosePressed:(id)sender {
