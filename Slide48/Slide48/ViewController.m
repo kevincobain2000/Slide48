@@ -72,12 +72,14 @@
          
      }
      else{
-         
          gambar = [UIImage imageNamed:@"4_puzzle.jpg"];
          UIImageView *fullImage = [[UIImageView alloc] initWithImage:gambar];
          fullImage.frame = board.bounds;
          [board addSubview:fullImage];
          self.imageViewShowPicture.image = [UIImage imageNamed:@"4_puzzle.jpg"];
+          
+         NSLog(@"No image previously");
+          
      }
     
     NSNumber* sizeBoard = [NSNumber numberWithInt:([sharedData.difficultyLevel intValue]+2)];
@@ -93,6 +95,7 @@
     NSLog(@"Print Puzzle Board %@", puzzleBoard);
     if(puzzleBoard==NULL)
     {
+        NSLog(@"Puzzleboard == NULL");
         step = 0;
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:NULL];
         posstions = board.board.tiles;
@@ -100,6 +103,7 @@
     }
     else
     {
+        NSLog(@"Puzzleboard NOT NULL");
         step = puzzleBoard.step;
         [board playWithImage:gambar andSize:([sharedData.difficultyLevel intValue]+2) andTiles:puzzleBoard.positions];
         
@@ -243,7 +247,7 @@
     
     float dropHeight = 260;
     if (IsRunningTallPhone()){
-        dropHeight = 300;
+        dropHeight = 260;
     }
     else if (IsRunningiPad()){
         //Set the dropHeight

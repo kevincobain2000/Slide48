@@ -18,6 +18,7 @@
 		AD09110F16DDE1B000297A5F /* Applause-faded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */; };
 		AD09111016DDE1B000297A5F /* Button.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD09110D16DDE1B000297A5F /* Button.wav */; };
 		AD09111116DDE1B000297A5F /* buttonPress.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD09110E16DDE1B000297A5F /* buttonPress.wav */; };
+		AD4015C116F7386800AB8716 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD4015C016F7386800AB8716 /* Localizable.strings */; };
 		AD4786A616DC5F590034C8C3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4786A516DC5F590034C8C3 /* MenuViewController.m */; };
 		AD668E2F16F5DC07000D2DDC /* 86_puzzle_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD668E2D16F5DC07000D2DDC /* 86_puzzle_thumb.jpg */; };
 		AD668E3016F5DC07000D2DDC /* 86_puzzle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD668E2E16F5DC07000D2DDC /* 86_puzzle.jpg */; };
@@ -187,6 +188,9 @@
 		AD09110C16DDE1B000297A5F /* Applause-faded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Applause-faded.mp3"; sourceTree = "<group>"; };
 		AD09110D16DDE1B000297A5F /* Button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Button.wav; sourceTree = "<group>"; };
 		AD09110E16DDE1B000297A5F /* buttonPress.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonPress.wav; sourceTree = "<group>"; };
+		AD4015B316F72A2400AB8716 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AD4015B416F72A2400AB8716 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD4015C016F7386800AB8716 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		AD4786A416DC5F590034C8C3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		AD4786A516DC5F590034C8C3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		AD668E2D16F5DC07000D2DDC /* 86_puzzle_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 86_puzzle_thumb.jpg; sourceTree = "<group>"; };
@@ -549,6 +553,7 @@
 		ADC0C23E16D62E1B00321E43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AD4015C016F7386800AB8716 /* Localizable.strings */,
 				ADD8238016CCA5A20000671B /* MainStoryboard.storyboard */,
 			);
 			name = UI;
@@ -744,6 +749,7 @@
 				ADD8236116CCA5A10000671B /* Sources */,
 				ADD8236216CCA5A10000671B /* Frameworks */,
 				ADD8236316CCA5A10000671B /* Resources */,
+				AD4015BD16F736D200AB8716 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -769,6 +775,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = ADD8235C16CCA5A10000671B;
 			productRefGroup = ADD8236616CCA5A10000671B /* Products */;
@@ -912,10 +919,27 @@
 				ADE9CFD416F6FD1A0004B797 /* h1.png in Resources */,
 				ADE9CFD516F6FD1A0004B797 /* h2.png in Resources */,
 				ADE9CFDB16F705C00004B797 /* greyB.png in Resources */,
+				AD4015C116F7386800AB8716 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD4015BD16F736D200AB8716 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADD8236116CCA5A10000671B /* Sources */ = {
@@ -957,6 +981,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ADD8237216CCA5A10000671B /* en */,
+				AD4015B416F72A2400AB8716 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -965,6 +990,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ADD8238116CCA5A20000671B /* en */,
+				AD4015B316F72A2400AB8716 /* ja */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -997,7 +1023,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1021,7 +1047,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

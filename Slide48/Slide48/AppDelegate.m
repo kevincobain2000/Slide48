@@ -56,8 +56,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [YISplashScreen show];
-    [self startApp];
+    //[YISplashScreen show];
+    //[self startApp];
     return YES;
 }
 							
